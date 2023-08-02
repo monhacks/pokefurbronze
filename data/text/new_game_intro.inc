@@ -2,19 +2,19 @@ gOtherText_NewName::
     .string "NEW NAME$"
 
 gNameChoice_Green::
-    .string "GREEN$"
+    .string "BEIGE$"
 
 gNameChoice_Red::
-    .string "RED$"
+    .string "BRONZE$"
 
 gNameChoice_Leaf::
-    .string "LEAF$"
+    .string "COLLAR$"
 
 gNameChoice_Fire::
-    .string "FIRE$"
+    .string "FUR$"
 
 gNameChoice_Gary::
-    .string "GARY$"
+    .string "YORI$"
 
 gNameChoice_Kaz::
     .string "KAZ$"
@@ -23,7 +23,7 @@ gNameChoice_Toru::
     .string "TORU$"
 
 gNameChoice_Ash::
-    .string "ASH$"
+    .string "DAN$"
 
 gNameChoice_Kene::
     .string "KENE$"
@@ -101,13 +101,13 @@ gNameChoice_Cassie::
     .string "CASSIE$"
 
 gNameChoice_Rey::
-    .string "REY$"
+    .string "VENTI$"
 
 gNameChoice_Seda::
     .string "SEDA$"
 
 gNameChoice_Kiko::
-    .string "KIKO$"
+    .string "MIKO$"
 
 gNameChoice_Mina::
     .string "MINA$"
@@ -183,61 +183,75 @@ gPikachuIntro_Text_Page3::
     .string "of people and achieve personal growth.\n"
     .string "That is our biggest objective.\n"
     .string "\n"
-    .string "Press the A Button, and let your\n"
-    .string "adventure begin!$"
+    .string "This is game is based on the\n"
+    .string "POKéMON EEVEE ADVENTURES story,\n"
+    .string "written by GEEVEE LA FORGE.$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
     .string "Hello, there!\n"
-    .string "Glad to meet you!\p"
+    .string "I was expecting you!\p"
     .string "Welcome to the world of POKéMON!\p"
-    .string "My name is OAK.\p"
-    .string "People affectionately refer to me\n"
-    .string "as the POKéMON PROFESSOR.\p$"
+    .string "My name is BLACKBIRD.\p"
+    .string "People sometimes refer to me\n"
+    .string "as the MR. BLACKBIRD...\p" 
+    .string "...or PROFESSOR BLACKBIRD.$"
 
 gOakSpeech_Text_ThisWorld::
     .string "This world…$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
-    .string "…is inhabited far and wide by\n"
-    .string "creatures called POKéMON.\p$"
+    .string "VILL! Not now, please!\p"
+    .string "...\n"
+    .string "...\p"
+    .string "What was I talking about?\p" 
+    .string "Oh! The world is inhabited\n" 
+    .string "far and wide by animals\p"
+    .string "called POKéMON.\p" 
+    .string "I'm sorry, this is my first time,\n"
+    .string "I'm a little stressed.$"
 
 gOakSpeech_Text_IStudyPokemon::
     .string "For some people, POKéMON are pets.\n"
     .string "Others use them for battling.\p"
     .string "As for myself…\p"
-    .string "I study POKéMON as a profession.\p$"
+    .string "I observe the POKéMON and learn\n"
+    .string "from them as much as I can.\p"
+    .string "This is my work and passion.$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
-    .string "But first, tell me a little about\n"
-    .string "yourself.\p$"
+    .string "But first, tell me a something\n"
+    .string "about yourself.$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
     .string "Let's begin with your name.\n"
-    .string "What is it?\p$"
+    .string "What is it?$"
 
 gOakSpeech_Text_SoYourNameIsPlayer::
-    .string "Right…\n"
-    .string "So your name is {PLAYER}.$"
+    .string "Okay...\n"
+    .string "So your name is {PLAYER}.\p" 
+    .string "Am I right?$"
 
 gOakSpeech_Text_WhatWasHisName::
-    .string "This is my grandson.\p"
-    .string "He's been your rival since you both\n"
+    .string "This is your cousin.\p"
+    .string "You've always supported\n"
+    .string "each other since you\p"
     .string "were babies.\p"
-    .string "…Erm, what was his name now?$"
+    .string "…can you remind me his name?$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
     .string "Your rival's name, what was it now?$"
 
 gOakSpeech_Text_ConfirmRivalName::
-    .string "…Er, was it {RIVAL}?$"
+    .string "So, it is {RIVAL}, right?$"
 
 gOakSpeech_Text_RememberRivalsName::
-    .string "That's right! I remember now!\n"
-    .string "His name is {RIVAL}!\p$"
+    .string "Thank you.$"
 
 gOakSpeech_Text_LetsGo::
-    .string "{PLAYER}!\p"
-    .string "Your very own POKéMON legend is\n"
-    .string "about to unfold!\p"
+    .string "So, {PLAYER}.\p"
+    .string "Your very own POKéMON\n"
+    .string "adventure is about to unfold!\p"
     .string "A world of dreams and adventures\n"
-    .string "with POKéMON awaits! Let's go!$"
+    .string "with POKéMON awaits!\p"
+    .string "Come, meet me in my Lab.\n"
+    .string "I've got something for you both.$"
