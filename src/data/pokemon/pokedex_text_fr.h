@@ -2718,3 +2718,11 @@ const u8 gDeoxysPokedexText[] = _(
     "altering its appearance.");
 
 const u8 gDeoxysPokedexTextUnused[] = _("");
+
+const u8 gVillPokedexText[] = _(
+    "This is one of the PROF.\n"
+    "BLACKBIRD POKéMON.\n"
+    "He said that it evolved from EEVEE\n"
+    "while exploring Sinnoh cold areas.");
+
+const u8 gVillPokedexTextUnused[] = _("");
