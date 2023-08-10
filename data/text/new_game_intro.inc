@@ -2,16 +2,16 @@ gOtherText_NewName::
     .string "NEW NAME$"
 
 gNameChoice_Green::
-    .string "BEIGE$"
+    .string "PINK$"
 
 gNameChoice_Red::
-    .string "BRONZE$"
+    .string "TURQUOISE$"
 
 gNameChoice_Leaf::
-    .string "COLLAR$"
+    .string "MIND$"
 
 gNameChoice_Fire::
-    .string "FUR$"
+    .string "COLD$"
 
 gNameChoice_Gary::
     .string "YORI$"
@@ -29,7 +29,7 @@ gNameChoice_Kene::
     .string "KENE$"
 
 gNameChoice_Geki::
-    .string "GEKI$"
+    .string "VICTOR$"
 
 gNameChoice_Jak::
     .string "JAK$"
@@ -38,10 +38,10 @@ gNameChoice_Janne::
     .string "JANNE$"
 
 gNameChoice_Jonn::
-    .string "JONN$"
+    .string "MAT$"
 
 gNameChoice_Kamon::
-    .string "KAMON$"
+    .string "PAT$"
 
 gNameChoice_Karl::
     .string "KARL$"
@@ -53,13 +53,13 @@ gNameChoice_Oscar::
     .string "OSCAR$"
 
 gNameChoice_Hiro::
-    .string "HIRO$"
+    .string "DAMIEN$"
 
 gNameChoice_Max::
     .string "MAX$"
 
 gNameChoice_Jon::
-    .string "JON$"
+    .string "JIM$"
 
 gNameChoice_Ralph::
     .string "RALPH$"
@@ -74,7 +74,7 @@ gNameChoice_Roak::
     .string "ROAK$"
 
 gNameChoice_Omi::
-    .string "OMI$"
+    .string "OWL$"
 
 gNameChoice_Jodi::
     .string "JODI$"
@@ -92,7 +92,7 @@ gNameChoice_Michi::
     .string "MICHI$"
 
 gNameChoice_Paula::
-    .string "PAULA$"
+    .string "HELEN$"
 
 gNameChoice_June::
     .string "JUNE$"
@@ -185,19 +185,20 @@ gPikachuIntro_Text_Page3::
     .string "\n"
     .string "This is game is based on the\n"
     .string "POKéMON EEVEE ADVENTURES story,\n"
-    .string "written by GEEVEE LA FORGE.$"
+    .string "written by GEEVEE LA FORGE.\p$"
 
 gOakSpeech_Text_WelcomeToTheWorld::
     .string "Hello, there!\n"
     .string "I was expecting you!\p"
     .string "Welcome to the world of POKéMON!\p"
     .string "My name is BLACKBIRD.\p"
-    .string "People sometimes refer to me\n"
-    .string "as the MR. BLACKBIRD...\p" 
-    .string "...or PROFESSOR BLACKBIRD.$"
+    .string "People sometimes refer to me as\n"
+    .string "PROFESSOR BLACKBIRD\p$"
 
 gOakSpeech_Text_ThisWorld::
-    .string "This world…$"
+    .string "This world…\p"
+    .string "...\n"
+    .string "...\p$"
 
 gOakSpeech_Text_IsInhabitedFarAndWide::
     .string "VILL! Not now, please!\p"
@@ -208,7 +209,7 @@ gOakSpeech_Text_IsInhabitedFarAndWide::
     .string "far and wide by animals\p"
     .string "called POKéMON.\p" 
     .string "I'm sorry, this is my first time,\n"
-    .string "I'm a little stressed.$"
+    .string "I'm a little stressed.\p$"
 
 gOakSpeech_Text_IStudyPokemon::
     .string "For some people, POKéMON are pets.\n"
@@ -216,11 +217,11 @@ gOakSpeech_Text_IStudyPokemon::
     .string "As for myself…\p"
     .string "I observe the POKéMON and learn\n"
     .string "from them as much as I can.\p"
-    .string "This is my work and passion.$"
+    .string "This is my work and passion.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
     .string "But first, tell me a something\n"
-    .string "about yourself.$"
+    .string "about yourself.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
     .string "Let's begin with your name.\n"
@@ -235,8 +236,8 @@ gOakSpeech_Text_WhatWasHisName::
     .string "This is your cousin.\p"
     .string "You've always supported\n"
     .string "each other since you\p"
-    .string "were babies.\p"
-    .string "…can you remind me his name?$"
+    .string "were babies.\n"
+    .string "…can you remind me his name?\p$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
     .string "Your rival's name, what was it now?$"
@@ -245,7 +246,7 @@ gOakSpeech_Text_ConfirmRivalName::
     .string "So, it is {RIVAL}, right?$"
 
 gOakSpeech_Text_RememberRivalsName::
-    .string "Thank you.$"
+    .string "Thank you.\p$"
 
 gOakSpeech_Text_LetsGo::
     .string "So, {PLAYER}.\p"
@@ -254,4 +255,4 @@ gOakSpeech_Text_LetsGo::
     .string "A world of dreams and adventures\n"
     .string "with POKéMON awaits!\p"
     .string "Come, meet me in my Lab.\n"
-    .string "I've got something for you both.$"
+    .string "I've got something for you both.\p$"
