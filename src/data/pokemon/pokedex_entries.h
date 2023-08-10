@@ -5030,4 +5030,16 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 337,
         .trainerOffset = 2,
     },
+
+    [NATIONAL_DEX_VILL] =
+    {
+        .categoryName = _("FRESH SNOW"),
+        .height = 7.89,
+        .weight = 249,
+        .description = gVillPokedexText,
+        .pokemonScale = 366,
+        .pokemonOffset = 10,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+    },
 };
