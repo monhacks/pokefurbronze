@@ -2709,3 +2709,11 @@ const u8 gDeoxysPokedexText[] = _(
     "cellular structure.");
 
 const u8 gDeoxysPokedexTextUnused[] = _("");
+
+const u8 gVillPokedexText[] = _(
+    "PROF. BLACKBIRD said that\n"
+    "this Ice type POKéMON evolved\n"
+    "from EEVEE in Sinnoh.\n"
+    "Strange.");
+
+const u8 gVillPokedexTextUnused[] = _("");
