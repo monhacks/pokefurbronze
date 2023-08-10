@@ -1,5 +1,5 @@
 const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
-    [SPECIES_NONE] = _("??????????"),
+    [SPECIES_NONE] = _("M15SI6N0"),
     [SPECIES_BULBASAUR] = _("BULBASAUR"),
     [SPECIES_IVYSAUR] = _("IVYSAUR"),
     [SPECIES_VENUSAUR] = _("VENUSAUR"),
@@ -411,4 +411,5 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_JIRACHI] = _("JIRACHI"),
     [SPECIES_DEOXYS] = _("DEOXYS"),
     [SPECIES_CHIMECHO] = _("CHIMECHO"),
+    [SPECIES_VILL] = _("VILL"),
 };
