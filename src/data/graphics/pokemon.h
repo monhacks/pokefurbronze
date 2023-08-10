@@ -2721,6 +2721,13 @@ const u32 gMonShinyPalette_Chimecho[] = INCBIN_U32("graphics/pokemon/chimecho/sh
 const u8 gMonIcon_Chimecho[] = INCBIN_U8("graphics/pokemon/chimecho/icon.4bpp");
 const u8 gMonFootprint_Chimecho[] = INCBIN_U8("graphics/pokemon/chimecho/footprint.1bpp");
 
+const u32 gMonFrontPic_Vill[] = INCBIN_U32("graphics/pokemon/vill/front.4bpp.lz");
+const u32 gMonPalette_Vill[] = INCBIN_U32("graphics/pokemon/vill/normal.gbapal.lz");
+const u32 gMonBackPic_Vill[] = INCBIN_U32("graphics/pokemon/vill/back.4bpp.lz");
+const u32 gMonShinyPalette_Vill[] = INCBIN_U32("graphics/pokemon/vill/shiny.gbapal.lz");
+const u8 gMonIcon_Vill[] = INCBIN_U8("graphics/pokemon/vill/icon.4bpp");
+const u8 gMonFootprint_Vill[] = INCBIN_U8("graphics/pokemon/vill/footprint.1bpp");
+
 const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/front.4bpp.lz");
 const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
 
