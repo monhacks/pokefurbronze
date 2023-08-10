@@ -1799,6 +1799,7 @@ static const u16 sEasyChatWordsByLetter_V[] = {
     -1, 2, // Doubled pokemon species name
     EC_POKEMON2(VILEPLUME),
     EC_POKEMON(VILEPLUME),
+    EC_POKEMON(VILL), 
     EC_MOVE2(VINE_WHIP),
     EC_WORD_VITAL_SPIRIT,
     EC_MOVE(VITAL_THROW),
