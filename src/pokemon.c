@@ -1459,7 +1459,7 @@ const u8 gStatStageRatios[MAX_STAT_STAGE + 1][2] =
     {40, 10}, // +6, MAX_STAT_STAGE
 };
 
-static const u8 sText_GameFreak[] = _("ă‚˛ăĽă•ăŞ");
+static const u8 sText_GameFreak[] = _("ゲーフリ");
 
 static const u8 sHoldEffectToType[][2] = 
 {
