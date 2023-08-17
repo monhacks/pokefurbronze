@@ -1,4 +1,4 @@
-# Pokémon FireRed and LeafGreen
+# Pokémon IceTurquoise and BlazeOrange
 
 [![Build Status][travis-badge]][travis]
 
