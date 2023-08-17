@@ -746,3 +746,14 @@ const struct Tileset gTileset_HallOfFame =
     .callback = NULL,
 };
 
+
+const struct Tileset gTileset_KailoTown =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_KailoTown,
+    .palettes = gTilesetPalettes_KailoTown,
+    .metatiles = gMetatiles_KailoTown,
+    .metatileAttributes = gMetatileAttributes_KailoTown,
+    .callback = NULL,
+};
