@@ -1362,3 +1362,5 @@ Text_TestMsg::
 
 	.include "data/maps/KailoTown/scripts.inc"
 	.include "data/maps/KailoTown/text.inc"
+	.include "data/maps/KailoLabYard/scripts.inc"
+	.include "data/maps/KailoLabYard/text.inc"

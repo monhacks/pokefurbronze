@@ -934,6 +934,7 @@ static const u8 sMapFlyDestinations[][3] = {
     [MAPSEC_RIXY_CHAMBER        - MAPSECS_KANTO] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_VIAPOIS_CHAMBER     - MAPSECS_KANTO] = {MAP(PALLET_TOWN),                           0},
     [MAPSEC_EMBER_SPA           - MAPSECS_KANTO] = {MAP(PALLET_TOWN),                           0},
+    [MAPSEC_KAILO_TOWN          - MAPSECS_KANTO] = {MAP(KAILO_TOWN),                            SPAWN_KAILO_TOWN},
 };
 
 static void RegionMap_DarkenPalette(u16 *pal, u16 size, u16 tint)

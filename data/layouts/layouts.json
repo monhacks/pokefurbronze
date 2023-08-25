@@ -4392,6 +4392,18 @@
       "secondary_tileset": "gTileset_KailoTown",
       "border_filepath": "data/layouts/KailoTown/border.bin",
       "blockdata_filepath": "data/layouts/KailoTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAILO_LAB_YARD",
+      "name": "KailoLabYard_Layout",
+      "width": 20,
+      "height": 22,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_KailoTown",
+      "border_filepath": "data/layouts/KailoLabYard/border.bin",
+      "blockdata_filepath": "data/layouts/KailoLabYard/map.bin"
     }
   ]
 }
