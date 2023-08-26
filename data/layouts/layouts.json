@@ -4385,7 +4385,7 @@
       "id": "LAYOUT_KAILO_TOWN",
       "name": "KailoTown_Layout",
       "width": 39,
-      "height": 28,
+      "height": 39,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",

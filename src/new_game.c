@@ -81,7 +81,7 @@ static void ClearBattleTower(void)
 
 static void WarpToPlayersRoom(void)
 {
-    SetWarpDestination(MAP_GROUP(KAILO_TOWN), MAP_NUM(KAILO_TOWN), -1, 5, 6);
+    SetWarpDestination(MAP_GROUP(KAILO_TOWN), MAP_NUM(KAILO_TOWN), -1, 8, 33);
     WarpIntoMap();
 }
 

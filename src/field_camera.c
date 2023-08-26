@@ -431,6 +431,12 @@ void MoveCameraAndRedrawMap(int deltaX, int deltaY) // unused
     gTotalCameraPixelOffsetY -= deltaY * 16;
 }
 
+void UpdateSavedPos(void)
+{
+    gSaveBlock1Ptr->savedPos.x = gSaveBlock1Ptr->pos.x;
+    gSaveBlock1Ptr->savedPos.y = gSaveBlock1Ptr->pos.y;
+}
+
 void CameraUpdateNoObjectRefresh(void)
 {
     int deltaX;

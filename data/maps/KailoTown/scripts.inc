@@ -23,8 +23,12 @@ KailoTown_OnLoad::
   end
 
 KailoTown_OnFrame::
-  map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 0, KailoTown_EventScript_IntroScript
+  map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 0, KailoTown_EventScript_IfIntroScript
   .2byte 0
+
+KailoTown_EventScript_IfIntroScript::
+  call_if_unset FLAG_0x200, KailoTown_EventScript_IntroScript
+  end
 
 KailoTown_EventScript_IntroSetup::
   call KailoTown_EventScript_PuddleDebuggersCave
@@ -34,7 +38,6 @@ KailoTown_EventScript_IntroSetup::
   call KailoTown_EventScript_PuddlePokemonCenter
   setflag FLAG_0x201
   setweather WEATHER_DOWNPOUR
-  setobjectmovementtype OBJ_EVENT_ID_PLAYER, MOVEMENT_TYPE_INVISIBLE
   return
 
 KailoTown_EventScript_AfterRain::
@@ -197,21 +200,51 @@ KailoTown_Movement_JennyStop_JennyBlock::
 
 KailoTown_EventScript_IntroScript::
   lock
+  fadescreen FADE_TO_BLACK
   doweather
+  setvar VAR_0x4044, 5  @ CameraTeleportX
+	setvar VAR_0x4045, 5  @ CameraTeleportY
+	special TeleportCamera
+  special SpawnCameraObject
+  setobjectxy OBJ_EVENT_ID_CAMERA, 5, 5
+  fadescreen FADE_FROM_BLACK
   applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienStart
   waitmovement 0
+  delay 30
+  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookRight
+  waitmovement 0
+  delay 30
+  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookLeft
+  waitmovement 0
+  delay 30
+  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienMiddle
+  waitmovement 0
+  delay 30
+  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookRight
+  waitmovement 0
+  delay 30
+  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookLeft
+  waitmovement 0
+  delay 30
+  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookDown
+  waitmovement 0
+  delay 30
+  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienOpenDoor
+  delay 30
   opendoor 5, 4
   waitdooranim
+  waitmovement 0
   applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienEnd
+  waitmovement 0
   delay 85
   delay 85
   delay 85
   playmoncry SPECIES_LUGIA, CRY_MODE_WEAK
-  delay 50
+  delay 20
   applymovement LOCALID_DAMIEN, KailoTown_Movement_JennyStopPlayerSuprised
+  playse SE_PIN
   delay 85
   delay 85
-  special SpawnCameraObject
   applymovement OBJ_EVENT_ID_CAMERA, KailoTown_Movement_Intro_ToLab
   waitmovement 0
   opendoor 4, 13
@@ -240,21 +273,35 @@ KailoTown_EventScript_IntroScript::
   release
   return
 
+KailoTown_Movement_Intro_DamienLookRight::
+  face_right
+  step_end
+
+KailoTown_Movement_Intro_DamienLookLeft::
+  face_left
+  step_end
+
+KailoTown_Movement_Intro_DamienLookDown::
+  face_down
+  step_end
+
 KailoTown_Movement_Intro_DamienStart::
   walk_slow_down
   walk_slow_down
   walk_slow_up
   walk_slow_up
   walk_slow_down
-  walk_in_place_faster_down
-  walk_in_place_faster_left
-  walk_in_place_faster_right
+  step_end
+
+KailoTown_Movement_Intro_DamienMiddle::
   walk_slow_up
-  walk_in_place_faster_left
-  walk_in_place_faster_right
-  walk_in_place_faster_down
-  walk_in_place_faster_up
-  walk_in_place_faster_up
+  step_end
+
+KailoTown_Movement_Intro_DamienOpenDoor::
+  walk_in_place_up
+  walk_in_place_up
+  walk_in_place_up
+  walk_in_place_up
   step_end
   
 KailoTown_Movement_Intro_DamienEnd::
