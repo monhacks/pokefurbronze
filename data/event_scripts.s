@@ -1364,3 +1364,12 @@ Text_TestMsg::
 	.include "data/maps/KailoTown/text.inc"
 	.include "data/maps/KailoLabYard/scripts.inc"
 	.include "data/maps/KailoLabYard/text.inc"
+
+	.include "data/maps/KailoTown_PlayersHouse_2F/scripts.inc"
+	.include "data/maps/KailoTown_PlayersHouse_2F/text.inc"
+
+	.include "data/maps/KailoTownFake/scripts.inc"
+	.include "data/maps/KailoTownFake/text.inc"
+
+	.include "data/maps/KailoTown_IndoorKailo_PlayersHouse_2F_Window/scripts.inc"
+	.include "data/maps/KailoTown_IndoorKailo_PlayersHouse_2F_Window/text.inc"

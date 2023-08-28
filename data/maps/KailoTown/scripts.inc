@@ -1,14 +1,11 @@
-.equ LOCALID_JENNY,  2
-.equ LOCALID_DAMIEN,  1
-.equ LOCALID_VICTOR,  4
-.equ LOCALID_JOY,  5
-.equ LOCALID_GIRL,  3
+.equ LOCALID_JENNY,  4
+.equ LOCALID_GIRL,  2
+.equ LOCALID_SELLER, 3
 
 @ one tile run is 0.125 sec
 @ one tile walk is 0.25 sec
 
 KailoTown_MapScripts::
-  map_script MAP_SCRIPT_ON_FRAME_TABLE, KailoTown_OnFrame
   map_script MAP_SCRIPT_ON_TRANSITION, KailoTown_OnTransition
   map_script MAP_SCRIPT_ON_LOAD, KailoTown_OnLoad
 	.byte 0
@@ -18,27 +15,8 @@ KailoTown_OnTransition::
   end
 
 KailoTown_OnLoad::
-  call_if_unset FLAG_0x200, KailoTown_EventScript_IntroSetup
   call_if_lt VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, KailoTown_EventScript_AfterRain
   end
-
-KailoTown_OnFrame::
-  map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 0, KailoTown_EventScript_IfIntroScript
-  .2byte 0
-
-KailoTown_EventScript_IfIntroScript::
-  call_if_unset FLAG_0x200, KailoTown_EventScript_IntroScript
-  end
-
-KailoTown_EventScript_IntroSetup::
-  call KailoTown_EventScript_PuddleDebuggersCave
-  call KailoTown_EventScript_PuddleLab
-  call KailoTown_EventScript_PuddleGym
-  call KailoTown_EventScript_PuddleHause
-  call KailoTown_EventScript_PuddlePokemonCenter
-  setflag FLAG_0x201
-  setweather WEATHER_DOWNPOUR
-  return
 
 KailoTown_EventScript_AfterRain::
   call KailoTown_EventScript_PuddleDebuggersCave
@@ -53,31 +31,6 @@ KailoTown_EventScript_PuddleDebuggersCave::
   setmetatile 12, 8, 0x1A8, 0
   setmetatile 13, 9, 0x1A9, 0
   setmetatile 13, 8, 0x1A9, 0
-  return
-  
-KailoTown_EventScript_PuddleGym::
-  setmetatile 5, 6, 0x1A1, 0
-  setmetatile 5, 8, 0x1B1, 0
-  setmetatile 5, 7, 0x1A9, 0
-  return
-
-KailoTown_EventScript_PuddleLab::
-  setmetatile 8, 14, 0x1A2, 0
-  setmetatile 8, 15, 0x1AA, 0
-  setmetatile 8, 16, 0x1AA, 0
-  setmetatile 8, 17, 0x1B2, 0
-  setmetatile 5, 16, 0x1B1, 0
-  setmetatile 6, 16, 0x1B1, 0
-  setmetatile 4, 16, 0x1B0, 0
-  setmetatile 7, 17, 0x1B0, 0
-  setmetatile 4, 15, 0x1A8, 0
-  setmetatile 4, 14, 0x1A0, 0
-  setmetatile 6, 14, 0x1A9, 0
-  setmetatile 7, 14, 0x1A9, 0
-  setmetatile 5, 15, 0x1A9, 0
-  setmetatile 6, 15, 0x1A9, 0
-  setmetatile 7, 15, 0x1A9, 0
-  setmetatile 7, 16, 0x1A9, 0
   return
 
 KailoTown_EventScript_PuddleHause::
@@ -121,7 +74,6 @@ KailoTown_EventScript_PuddlePokemonCenter::
 
 KailoTown_EventScript_FlagSetup::
   setflag FLAG_0x205
-  setflag FLAG_0x202
   return
 
 KailoTown_EventScript_Jenny::
@@ -134,7 +86,7 @@ KailoTown_EventScript_Jenny::
   end
 
 KailoTown_EventScript_Exit::
-  call_if_lt VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, KailoTown_EventScript_JennyStop
+  call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, KailoTown_EventScript_JennyStop
   end
 
 KailoTown_EventScript_JennyStop::
@@ -166,8 +118,8 @@ KailoTown_Movement_JennyStopPlayerSuprised::
   step_end
 
 KailoTown_Movement_JennyStopJennyWalkIn::
-  walk_right
   walk_down
+  walk_right
   walk_right
   walk_right
   walk_up
@@ -195,212 +147,78 @@ KailoTown_Movement_JennyStop_JennyBack::
 KailoTown_Movement_JennyStop_JennyBlock::
   walk_right
   walk_right
+  walk_right
   face_left
   step_end
 
-KailoTown_EventScript_IntroScript::
+KailoTown_EventScript_LabSign::
+  msgbox KailoTown_Text_LabSign
+  closemessage
+  end
+
+KailoTown_EventScript_DC::
+  msgbox KailoTown_Text_DC
+  closemessage
+  end
+
+KailoTown_EventScript_KailoSign::
+  msgbox KailoTown_Text_KailoSign
+  closemessage
+  end
+
+KailoTown_EventScript_Mailbox::
+  msgbox KailoTown_Text_Mailbox
+  closemessage
+  end
+
+KailoTown_EventScript_HelenMailbox::
+  msgbox KailoTown_Text_HelenMailbox
+  closemessage
+  end
+
+KailoTown_EventScript_DoorClosed::
+  msgbox KailoTown_Text_DoorClosed
+  closemessage
+  end
+
+KailoTown_EventScript_UnderConstruction::
+  msgbox KailoTown_Text_UnderConstruction
+  closemessage
+  end
+
+KailoTown_EventScript_Gym::
+  msgbox KailoTown_Text_Gym
+  closemessage
+  end
+
+KailoTown_EventScript_Unloader::
   lock
-  fadescreen FADE_TO_BLACK
-  doweather
-  setvar VAR_0x4044, 5  @ CameraTeleportX
-	setvar VAR_0x4045, 5  @ CameraTeleportY
-	special TeleportCamera
-  special SpawnCameraObject
-  setobjectxy OBJ_EVENT_ID_CAMERA, 5, 5
-  fadescreen FADE_FROM_BLACK
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienStart
-  waitmovement 0
-  delay 30
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookRight
-  waitmovement 0
-  delay 30
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookLeft
-  waitmovement 0
-  delay 30
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienMiddle
-  waitmovement 0
-  delay 30
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookRight
-  waitmovement 0
-  delay 30
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookLeft
-  waitmovement 0
-  delay 30
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienLookDown
-  waitmovement 0
-  delay 30
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienOpenDoor
-  delay 30
-  opendoor 5, 4
-  waitdooranim
-  waitmovement 0
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_Intro_DamienEnd
-  waitmovement 0
-  delay 85
-  delay 85
-  delay 85
-  playmoncry SPECIES_LUGIA, CRY_MODE_WEAK
-  delay 20
-  applymovement LOCALID_DAMIEN, KailoTown_Movement_JennyStopPlayerSuprised
-  playse SE_PIN
-  delay 85
-  delay 85
-  applymovement OBJ_EVENT_ID_CAMERA, KailoTown_Movement_Intro_ToLab
-  waitmovement 0
-  opendoor 4, 13
-  waitdooranim
-  addobject LOCALID_VICTOR
-  applymovement LOCALID_VICTOR, KailoTown_Movement_Intro_VictorStart
-  delay 37
-  applymovement OBJ_EVENT_ID_CAMERA, KailoTown_Movement_Intro_CameraMiddle
+  message KailoTown_Text_Unloader
+  waitmessage
   delay 50
-  addobject LOCALID_JOY
-  applymovement LOCALID_JOY, KailoTown_Movement_Intro_JoyStart
+  closemessage
+  playse SE_PIN
+  applymovement LOCALID_SELLER, KailoTown_Movement_SellerPin
   waitmovement 0
-  delay 85
-  applymovement LOCALID_VICTOR, KailoTown_Movement_Intro_VictorEnd
-  applymovement LOCALID_JOY, KailoTown_Movement_Intro_JoyEnd
-  delay 37
-  applymovement OBJ_EVENT_ID_CAMERA, KailoTown_Movement_Intro_End
-  waitmovement 0
-  delay 85
-  warp MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB, 6, 12
-  special RemoveCameraObject
-  waitstate
-  setflag FLAG_0x200
-  clearflag FLAG_0x201
-  setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
+  faceplayer
+  delay 30
+  msgbox KailoTown_Text_GetOff
+  closemessage
+  applymovement LOCALID_SELLER, KailoTown_Movement_SellerBack
   release
-  return
+  end
 
-KailoTown_Movement_Intro_DamienLookRight::
-  face_right
+KailoTown_Movement_SellerPin::
+  emote_exclamation_mark
   step_end
 
-KailoTown_Movement_Intro_DamienLookLeft::
-  face_left
+KailoTown_Movement_SellerBack::
+  face_up
   step_end
 
-KailoTown_Movement_Intro_DamienLookDown::
-  face_down
-  step_end
-
-KailoTown_Movement_Intro_DamienStart::
-  walk_slow_down
-  walk_slow_down
-  walk_slow_up
-  walk_slow_up
-  walk_slow_down
-  step_end
-
-KailoTown_Movement_Intro_DamienMiddle::
-  walk_slow_up
-  step_end
-
-KailoTown_Movement_Intro_DamienOpenDoor::
-  walk_in_place_up
-  walk_in_place_up
-  walk_in_place_up
-  walk_in_place_up
-  step_end
-  
-KailoTown_Movement_Intro_DamienEnd::
-  walk_slow_up
-  walk_in_place_faster_down
-  step_end
-
-KailoTown_Movement_Intro_ToLab::
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  walk_slow_down
-  step_end
-
-KailoTown_Movement_Intro_VictorStart::
-  walk_down
-  walk_down
-  walk_right
-  walk_right
-  walk_right
-  walk_right
-  walk_right
-  walk_down
-  walk_down
-  walk_down
-  walk_right
-  walk_right
-  step_end
-
-KailoTown_Movement_Intro_CameraMiddle::
-  walk_right
-  walk_right
-  walk_right
-  walk_right
-  walk_down
-  walk_down
-  walk_down
-  walk_right
-  walk_right
-  step_end
-
-KailoTown_Movement_Intro_JoyStart::
-  walk_left
-  walk_left
-  walk_left
-  walk_left
-  walk_left
-  step_end
-
-
-KailoTown_Movement_Intro_VictorEnd::
-  walk_left
-  walk_left
-  walk_up
-  walk_up
-  walk_up
-  walk_left
-  walk_left
-  walk_left
-  walk_left
-  set_invisible
-  step_end
-
-KailoTown_Movement_Intro_JoyEnd::
-  walk_left
-  walk_left
-  walk_left
-  walk_up
-  walk_up
-  walk_up
-  walk_left
-  walk_left
-  walk_left
-  walk_left
-  set_invisible
-  step_end
-
-KailoTown_Movement_Intro_End::
-  walk_slow_right
-  walk_slow_right
-  walk_slow_right
-  walk_slow_right
-  walk_slow_right
-  walk_slow_right
-  walk_slow_right
-  walk_slow_right
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  walk_slow_up
-  step_end
+KailoTown_EventScript_Girl::
+  lock
+  msgbox KailoTown_Text_NoPopular
+  closemessage
+  release
+  end

@@ -2924,27 +2924,10 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne = {
     .affineAnims = gDummySpriteAffineAnimTable,
 };
 
-const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Eevee = { 
-    .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_EEVEE,
-    .size = 512,
-    .width = 32,
-    .height = 32,
-    .paletteSlot = 3,
-    .shadowSize = SHADOW_SIZE_M,
-    .inanimate = FALSE,
-    .disableReflectionPaletteLoad = FALSE,
-    .tracks = TRACKS_FOOT,
-    .oam = &gObjectEventBaseOam_32x32,
-    .subspriteTables = gObjectEventSpriteOamTables_32x32,
-    .anims = sAnimTable_Standard,
-    .images = gObjectEventPicTable_Eevee,
-    .affineAnims = gDummySpriteAffineAnimTable,
-};
-
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glaceon = { 
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_GLACEON,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,
     .height = 32,
@@ -2957,5 +2940,24 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glaceon = {
     .subspriteTables = gObjectEventSpriteOamTables_32x32,
     .anims = sAnimTable_Standard,
     .images = gObjectEventPicTable_Glaceon,
+    .affineAnims = gDummySpriteAffineAnimTable,
+};
+
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Eevee = { 
+    .tileTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_EEVEE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = 3,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = gObjectEventSpriteOamTables_32x32,
+    .anims = sAnimTable_Standard,
+    .images = gObjectEventPicTable_Eevee,
     .affineAnims = gDummySpriteAffineAnimTable,
 };

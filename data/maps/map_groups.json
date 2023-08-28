@@ -307,10 +307,12 @@
     "SevenIsland_SevaultCanyon_Entrance",
     "SevenIsland_SevaultCanyon",
     "SevenIsland_TanobyRuins",
-    "KailoTown"
+    "KailoTown",
+    "KailoTownFake"
   ],
   "gMapGroup_IndoorKailo": [
-
+    "KailoTown_PlayersHouse_2F",
+    "KailoTown_IndoorKailo_PlayersHouse_2F_Window"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

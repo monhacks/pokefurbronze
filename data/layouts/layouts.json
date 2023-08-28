@@ -4385,7 +4385,7 @@
       "id": "LAYOUT_KAILO_TOWN",
       "name": "KailoTown_Layout",
       "width": 39,
-      "height": 39,
+      "height": 28,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -4404,6 +4404,42 @@
       "secondary_tileset": "gTileset_KailoTown",
       "border_filepath": "data/layouts/KailoLabYard/border.bin",
       "blockdata_filepath": "data/layouts/KailoLabYard/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAILO_TOWN_PLAYERS_HOUSE_2F",
+      "name": "KailoTown_PlayersHouse_2F_Layout",
+      "width": 12,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/KailoTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/KailoTown_PlayersHouse_2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAILO_TOWN_FAKE",
+      "name": "KailoTownFake_Layout",
+      "width": 39,
+      "height": 40,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_KailoTown",
+      "border_filepath": "data/layouts/KailoTownFake/border.bin",
+      "blockdata_filepath": "data/layouts/KailoTownFake/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
+      "name": "KailoTown_IndoorKailo_PlayersHouse_2F_Window_Layout",
+      "width": 15,
+      "height": 8,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_KailoTown",
+      "border_filepath": "data/layouts/KailoTown_IndoorKailo_PlayersHouse_2F_Window/border.bin",
+      "blockdata_filepath": "data/layouts/KailoTown_IndoorKailo_PlayersHouse_2F_Window/map.bin"
     }
   ]
 }

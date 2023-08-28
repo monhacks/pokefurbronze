@@ -17,7 +17,7 @@
 #include "data.h"
 #include "constants/songs.h"
 
-#define INTRO_SPECIES SPECIES_VILL
+#define INTRO_SPECIES SPECIES_SANDSLASH
 
 enum
 {

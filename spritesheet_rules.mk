@@ -399,6 +399,6 @@ $(OBJEVENTGFXDIR)/pokemon/wigglytuff.4bpp: %.4bpp: %.png
 
 $(OBJEVENTGFXDIR)/pokemon/eevee.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
-  
-  $(OBJEVENTGFXDIR)/glaceon/glaceon.4bpp: %.4bpp: %.png
+
+$(OBJEVENTGFXDIR)/pokemon/glaceon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4

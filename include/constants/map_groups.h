@@ -268,8 +268,11 @@
 #define MAP_SEVEN_ISLAND_SEVAULT_CANYON          (64 | (3 << 8))
 #define MAP_SEVEN_ISLAND_TANOBY_RUINS            (65 | (3 << 8))
 #define MAP_KAILO_TOWN                           (66 | (3 << 8))
+#define MAP_KAILO_TOWN_FAKE                      (67 | (3 << 8))
 
 // gMapGroup_IndoorKailo
+#define MAP_KAILO_TOWN_PLAYERS_HOUSE_2F                     (0 | (4 << 8))
+#define MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW (1 | (4 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (5 << 8))
