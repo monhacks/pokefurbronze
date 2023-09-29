@@ -1,6 +1,7 @@
 .equ LOCALID_JENNY,  4
 .equ LOCALID_GIRL,  2
 .equ LOCALID_SELLER, 3
+.equ LOCALID_DAMIEN, 1
 
 @ one tile run is 0.125 sec
 @ one tile walk is 0.25 sec
@@ -11,18 +12,18 @@ KailoTown_MapScripts::
 	.byte 0
 
 KailoTown_OnTransition::
-  call_if_unset FLAG_0x205, KailoTown_EventScript_FlagSetup
+  call_if_unset FLAG_HIDE_CUTSCENE_DUMMIES, KailoTown_EventScript_FlagSetup
   end
 
 KailoTown_OnLoad::
-  call_if_lt VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, KailoTown_EventScript_AfterRain
+  call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, KailoTown_EventScript_AfterRain
   end
 
 KailoTown_EventScript_AfterRain::
   call KailoTown_EventScript_PuddleDebuggersCave
   call KailoTown_EventScript_PuddleHause
   call KailoTown_EventScript_PuddlePokemonCenter
-  return
+  end
 
 KailoTown_EventScript_PuddleDebuggersCave::
   setmetatile 14, 8, 0x1AA, 0
@@ -73,7 +74,7 @@ KailoTown_EventScript_PuddlePokemonCenter::
   return
 
 KailoTown_EventScript_FlagSetup::
-  setflag FLAG_0x205
+  setflag FLAG_HIDE_CUTSCENE_DUMMIES
   return
 
 KailoTown_EventScript_Jenny::
@@ -83,10 +84,6 @@ KailoTown_EventScript_Jenny::
   msgbox KailoTown_Text_JennyStopNoPassing
   closemessage
   release
-  end
-
-KailoTown_EventScript_Exit::
-  call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, KailoTown_EventScript_JennyStop
   end
 
 KailoTown_EventScript_JennyStop::
@@ -129,6 +126,7 @@ KailoTown_Movement_JennyStopJennyWalkIn::
   walk_right
   walk_right
   walk_right
+  walk_right
   step_end
 
 KailoTown_Movement_JennyStopPlayerBack::
@@ -145,7 +143,6 @@ KailoTown_Movement_JennyStop_JennyBack::
   step_end
 
 KailoTown_Movement_JennyStop_JennyBlock::
-  walk_right
   walk_right
   walk_right
   face_left
@@ -204,6 +201,7 @@ KailoTown_EventScript_Unloader::
   delay 30
   msgbox KailoTown_Text_GetOff
   closemessage
+  delay 30
   applymovement LOCALID_SELLER, KailoTown_Movement_SellerBack
   release
   end
@@ -218,7 +216,16 @@ KailoTown_Movement_SellerBack::
 
 KailoTown_EventScript_Girl::
   lock
+  faceplayer
   msgbox KailoTown_Text_NoPopular
+  closemessage
+  release
+  end
+
+KailoTown_EventScript_Damien::
+  lock
+  faceplayer
+  msgbox KailoTown_Text_NoLeader
   closemessage
   release
   end

@@ -12,11 +12,11 @@ KailoTownFake_OnFrame::
   .2byte 0
 
 KailoTownFake_OnLoad::
-  call_if_unset FLAG_0x200, KailoTownFake_EventScript_IntroSetup
+  call_if_unset FLAG_IS_INTRO_COMPLETED, KailoTownFake_EventScript_IntroSetup
   end
 
 KailoTownFake_EventScript_IfIntroScript::
-  call_if_unset FLAG_0x200, KailoTownFake_EventScript_IntroScript
+  call_if_unset FLAG_IS_INTRO_COMPLETED, KailoTownFake_EventScript_IntroScript
   end
 
 KailoTownFake_EventScript_IntroSetup::
@@ -25,7 +25,7 @@ KailoTownFake_EventScript_IntroSetup::
   call KailoTownFake_EventScript_PuddleGym
   call KailoTownFake_EventScript_PuddleHause
   call KailoTownFake_EventScript_PuddlePokemonCenter
-  setflag FLAG_0x201
+  setflag FLAG_HIDE_CUTSCENE_DUMMIES
   return
 
 KailoTownFake_EventScript_PuddleDebuggersCave::
@@ -105,7 +105,7 @@ KailoTownFake_EventScript_IntroScript::
   lock
   setweather WEATHER_RAIN_THUNDERSTORM
   doweather
-  delay 50
+  delay 20
   fadescreen FADE_TO_BLACK
   special SpawnCameraObject
   applymovement OBJ_EVENT_ID_CAMERA, KailoTownFake_Movement_Intro_CameraSetup
@@ -149,7 +149,7 @@ KailoTownFake_EventScript_IntroScript::
   applymovement LOCALID_DAMIEN, KailoTownFake_Movement_Intro_DamienSuprised
   playse SE_PIN
   delay 85
-  delay 85
+  delay 50
   applymovement OBJ_EVENT_ID_CAMERA, KailoTownFake_Movement_Intro_ToLab
   waitmovement 0
   opendoor 4, 25
@@ -168,13 +168,13 @@ KailoTownFake_EventScript_IntroScript::
   delay 37
   applymovement OBJ_EVENT_ID_CAMERA, KailoTownFake_Movement_Intro_End
   waitmovement 0
-  delay 85
+  delay 50
   setweather WEATHER_SUNNY
   doweather
-  delay 30
+  delay 20
   fadescreen FADE_TO_WHITE
   setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
-  setflag FLAG_0x200
+  setflag FLAG_IS_INTRO_COMPLETED
   delay 85
   special RemoveCameraObject
   warpsilent MAP_KAILO_TOWN_PLAYERS_HOUSE_2F, 1, 5

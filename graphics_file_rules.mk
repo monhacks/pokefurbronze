@@ -478,7 +478,7 @@ $(ITEMPCGFXDIR)/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 82 -Wnum_tiles
 
 $(TITLESCREENGFXDIR)/firered/box_art_mon.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 135 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
 
 $(TITLESCREENGFXDIR)/leafgreen/box_art_mon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 123 -Wnum_tiles
@@ -516,10 +516,10 @@ $(INTROGFXDIR)/scene_2/nidorino_close.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 170 -Wnum_tiles
 
 $(INTROGFXDIR)/scene_2/gengar_close.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 114 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 80 -Wnum_tiles
 
 $(INTROGFXDIR)/scene_3/gengar_anim.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 348 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 240 -Wnum_tiles
 
 $(BATTLETERRAINGFXDIR)/building/terrain.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 77 -Wnum_tiles

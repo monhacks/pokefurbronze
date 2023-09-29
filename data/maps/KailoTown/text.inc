@@ -23,7 +23,7 @@ KailoTown_Text_DC::
     .string "RESTAURANT$"
 
 KailoTown_Text_KailoSign::
-    .string "KAILO TOWN\p"
+    .string "KAILO TOWN\n"
     .string "A quiet paradise on earth.$"
 
 KailoTown_Text_Mailbox::
@@ -55,7 +55,20 @@ KailoTown_Text_GetOff::
     .string "Don't hang around here, kid!$"
 
 KailoTown_Text_NoPopular::
-    .string "KAILO TOWN isn't\n"
-    .string "very populat.\p"
+    .string "KAILO isn't\n"
+    .string "very popular.\p"
     .string "It's not even at the\n"
     .string "TOWN MAP!$"
+
+KailoTown_Text_NoLeader::
+    .string "Sorry, kid!\p"
+    .string "The Gym is not finished yet.\p"
+    .string "But even if it was,\n"
+    .string "we don't have a Leader.\p"
+    .string "...\n"
+    .string "...\p"
+    .string "Blaine?\p"
+    .string "I heard that became part\n"
+    .string "of the Elite Four...\p"
+    .string "...And there's too many trees\n"
+    .string "for Fire Pokémon Leader...$"

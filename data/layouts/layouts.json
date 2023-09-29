@@ -1048,7 +1048,7 @@
     {
       "id": "LAYOUT_ROUTE17",
       "name": "Route17_Layout",
-      "width": 24,
+      "width": 26,
       "height": 160,
       "border_width": 2,
       "border_height": 2,
@@ -4432,14 +4432,26 @@
     {
       "id": "LAYOUT_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
       "name": "KailoTown_IndoorKailo_PlayersHouse_2F_Window_Layout",
-      "width": 15,
-      "height": 8,
+      "width": 17,
+      "height": 11,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_KailoTown",
       "border_filepath": "data/layouts/KailoTown_IndoorKailo_PlayersHouse_2F_Window/border.bin",
       "blockdata_filepath": "data/layouts/KailoTown_IndoorKailo_PlayersHouse_2F_Window/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAIKO_TOWN_DELICIOUS_CAFE",
+      "name": "KaikoTown_DeliciousCafe_Layout",
+      "width": 21,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/KaikoTown_DeliciousCafe/border.bin",
+      "blockdata_filepath": "data/layouts/KaikoTown_DeliciousCafe/map.bin"
     }
   ]
 }

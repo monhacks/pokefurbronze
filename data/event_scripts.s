@@ -1373,3 +1373,6 @@ Text_TestMsg::
 
 	.include "data/maps/KailoTown_IndoorKailo_PlayersHouse_2F_Window/scripts.inc"
 	.include "data/maps/KailoTown_IndoorKailo_PlayersHouse_2F_Window/text.inc"
+
+	.include "data/maps/KaikoTown_DeliciousCafe/scripts.inc"
+	.include "data/maps/KaikoTown_DeliciousCafe/text.inc"

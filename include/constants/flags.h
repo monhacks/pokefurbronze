@@ -531,9 +531,9 @@
 
 // Unused?
 #define FLAG_0x1FF               0x1FF
-#define FLAG_0x200               0x200
-#define FLAG_0x201               0x201
-#define FLAG_0x202               0x202
+#define FLAG_HIDE_PLAYER         0x200
+#define FLAG_IS_INTRO_COMPLETED  0x201
+#define FLAG_HIDE_CUTSCENE_DUMMIES 0x202
 #define FLAG_0x203               0x203
 #define FLAG_0x204               0x204
 #define FLAG_0x205               0x205
