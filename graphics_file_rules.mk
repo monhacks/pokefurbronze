@@ -481,7 +481,7 @@ $(TITLESCREENGFXDIR)/firered/box_art_mon.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
 
 $(TITLESCREENGFXDIR)/leafgreen/box_art_mon.4bpp: %.4bpp: %.png
-	$(GFX) $< $@ -num_tiles 123 -Wnum_tiles
+	$(GFX) $< $@ -num_tiles 96 -Wnum_tiles
 
 POKEDEXAREAMARKERSDATADIR := graphics/pokedex/area_markers
 

@@ -2926,7 +2926,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glaceon = { 
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_GLACEON,
+    .paletteTag = OBJ_EVENT_PAL_TAG_GLACEON,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,
@@ -2945,7 +2945,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glaceon = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Eevee = { 
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_EEVEE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_EEVEE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,

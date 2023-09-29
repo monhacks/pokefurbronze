@@ -1856,7 +1856,7 @@ Cry_Chimecho::
 	.incbin "sound/direct_sound_samples/cries/chimecho.bin"
 
 	.align 2
-Cry_Vill::
+Cry_Glaceon::
 	.incbin "sound/direct_sound_samples/cries/glaceon.bin"
 
 
