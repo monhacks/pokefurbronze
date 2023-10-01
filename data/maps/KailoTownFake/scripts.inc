@@ -26,6 +26,7 @@ KailoTownFake_EventScript_IntroSetup::
   call KailoTownFake_EventScript_PuddleHause
   call KailoTownFake_EventScript_PuddlePokemonCenter
   setflag FLAG_HIDE_CUTSCENE_DUMMIES
+  setflag FLAG_HIDE_PLAYER
   return
 
 KailoTownFake_EventScript_PuddleDebuggersCave::
@@ -103,15 +104,9 @@ KailoTownFake_EventScript_PuddlePokemonCenter::
 
 KailoTownFake_EventScript_IntroScript::
   lock
-  setweather WEATHER_RAIN_THUNDERSTORM
-  doweather
-  delay 20
-  fadescreen FADE_TO_BLACK
-  special SpawnCameraObject
-  applymovement OBJ_EVENT_ID_CAMERA, KailoTownFake_Movement_Intro_CameraSetup
-  waitmovement 0
-  fadescreen FADE_FROM_BLACK
   applymovement LOCALID_DAMIEN, KailoTownFake_Movement_Intro_DamienStart
+  playse SE_THUNDER
+  special SpawnCameraObject
   waitmovement 0
   delay 30
   applymovement LOCALID_DAMIEN, KailoTownFake_Movement_Intro_DamienLookRight
@@ -139,16 +134,20 @@ KailoTownFake_EventScript_IntroScript::
   waitdooranim
   applymovement LOCALID_DAMIEN, KailoTownFake_Movement_Intro_DamienEnd
   waitmovement 0
-  delay 85
-  delay 85
-  delay 85
-  playse SE_THUNDER2
-  playmoncry SPECIES_LUGIA, CRY_MODE_WEAK
-  delay 20
+  delay 80
+  delay 80
+  delay 80
+  delay 80
+  delay 80
+  fadescreen FADE_TO_WHITE
+  fadescreen FADE_FROM_WHITE
+  playse SE_THUNDER
+  playmoncry SPECIES_LUGIA, CRY_MODE_FAINT
+  delay 50
   playse SE_THUNDER2
   applymovement LOCALID_DAMIEN, KailoTownFake_Movement_Intro_DamienSuprised
   playse SE_PIN
-  delay 85
+  delay 80
   delay 50
   applymovement OBJ_EVENT_ID_CAMERA, KailoTownFake_Movement_Intro_ToLab
   waitmovement 0
@@ -161,6 +160,9 @@ KailoTownFake_EventScript_IntroScript::
   delay 50
   addobject LOCALID_JOY
   applymovement LOCALID_JOY, KailoTownFake_Movement_Intro_JoyStart
+  playse SE_THUNDER
+  delay 40
+  playse SE_THUNDER2
   waitmovement 0
   delay 85
   applymovement LOCALID_VICTOR, KailoTownFake_Movement_Intro_VictorEnd
@@ -171,35 +173,16 @@ KailoTownFake_EventScript_IntroScript::
   delay 50
   setweather WEATHER_SUNNY
   doweather
-  delay 20
+  delay 30
   fadescreen FADE_TO_WHITE
   setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
   setflag FLAG_IS_INTRO_COMPLETED
+  clearflag FLAG_HIDE_PLAYER
   delay 85
-  special RemoveCameraObject
   warpsilent MAP_KAILO_TOWN_PLAYERS_HOUSE_2F, 1, 5
   waitstate
   release
   return
-
-KailoTownFake_Movement_Intro_CameraSetup::
-  player_run_left
-  player_run_left
-  player_run_left
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  player_run_down
-  step_end
 
 KailoTownFake_Movement_Intro_DamienLookRight::
   face_right
@@ -236,7 +219,7 @@ KailoTownFake_Movement_Intro_DamienEnd::
   step_end
 
 KailoTownFake_Movement_Intro_DamienSuprised::
-  emote_exclamation_mark
+  emote_double_exclamation_mark
   face_left
   step_end
 

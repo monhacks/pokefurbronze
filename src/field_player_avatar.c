@@ -1313,6 +1313,12 @@ void InitPlayerAvatar(s16 x, s16 y, u8 direction, u8 gender)
     gPlayerAvatar.spriteId = objectEvent->spriteId;
     gPlayerAvatar.gender = gender;
     SetPlayerAvatarStateMask(PLAYER_AVATAR_FLAG_CONTROLLABLE | PLAYER_AVATAR_FLAG_ON_FOOT);
+
+    if (FlagGet(FLAG_HIDE_PLAYER))
+    {
+        FlagClear(FLAG_HIDE_PLAYER);
+        objectEvent->invisible = TRUE;
+    }
 }
 
 void SetPlayerInvisibility(bool8 invisible)
