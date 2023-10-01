@@ -2097,11 +2097,7 @@ static void ResumeMap(bool32 inLink)
     ResetAllPicSprites();
     ResetCameraUpdateInfo();
     InstallCameraPanAheadCallback();
-    if (!inLink)
-        InitObjectEventPalettes(0);
-    else
-        InitObjectEventPalettes(1);
-
+    FreeAllSpritePalettes();
     FieldEffectActiveListClear();
     StartWeather();
     ResumePausedWeather();
@@ -2428,6 +2424,7 @@ static bool8 MapLdr_Credits(void)
         ResetAllPicSprites();
         ResetCameraUpdateInfo();
         InstallCameraPanAheadCallback();
+        FreeAllSpritePalettes();
         FieldEffectActiveListClear();
         StartWeather();
         ResumePausedWeather();
