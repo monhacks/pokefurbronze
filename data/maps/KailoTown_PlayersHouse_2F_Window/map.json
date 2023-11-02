@@ -1,7 +1,7 @@
 {
-  "id": "MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
-  "name": "KailoTown_IndoorKailo_PlayersHouse_2F_Window",
-  "layout": "LAYOUT_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
+  "id": "MAP_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
+  "name": "KailoTown_PlayersHouse_2F_Window",
+  "layout": "LAYOUT_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
   "music": "MUS_PEWTER",
   "region_map_section": "MAPSEC_KAILO_TOWN",
   "requires_flash": false,

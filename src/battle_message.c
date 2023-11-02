@@ -460,7 +460,7 @@ const u8 *const gPokeblockWasTooXStringTable[] = {
 };
 
 static const u8 sText_PlayerUsedItem[] = _("{B_PLAYER_NAME} used\n{B_LAST_ITEM}!");
-static const u8 sText_OldManUsedItem[] = _("The old man used\n{B_LAST_ITEM}!");
+static const u8 sText_BlackbirdUsedItem[] = _("PROF. BLACKBIRD used\n{B_LAST_ITEM}!");
 static const u8 sText_PokedudeUsedItem[] = _("The POKé DUDE used\n{B_LAST_ITEM}!");
 static const u8 sText_Trainer1UsedItem[] = _("{B_TRAINER1_CLASS} {B_TRAINER1_NAME}\nused {B_LAST_ITEM}!");
 static const u8 sText_TrainerBlockedBall[] = _("The TRAINER blocked the BALL!");
@@ -504,15 +504,17 @@ static const u8 sText_PlayedFluteCatchyTune[] = _("{B_PLAYER_NAME} played the {B
 static const u8 sText_PlayedThe[] = _("{B_PLAYER_NAME} played the\n{B_LAST_ITEM}.");
 static const u8 sText_PkmnHearingFluteAwoke[] = _("The POKéMON hearing the FLUTE\nawoke!");
 static const u8 sText_YouThrowABallNowRight[] = _("You throw a BALL now, right?\nI… I'll do my best!");
-const u8 gText_ForPetesSake[] = _("OAK: Oh, for Pete's sake…\nSo pushy, as always.\p{B_PLAYER_NAME}.\pYou've never had a POKéMON battle\nbefore, have you?\pA POKéMON battle is when TRAINERS\npit their POKéMON against each\lother.\p");
-const u8 gText_TheTrainerThat[] = _("The TRAINER that makes the other\nTRAINER's POKéMON faint by lowering\ltheir HP to “0,” wins.\p");
-const u8 gText_TryBattling[] = _("But rather than talking about it,\nyou'll learn more from experience.\pTry battling and see for yourself.\p");
-const u8 gText_InflictingDamageIsKey[] = _("OAK: Inflicting damage on the foe\nis the key to any battle.\p");
-const u8 gText_LoweringStats[] = _("OAK: Lowering the foe's stats\nwill put you at an advantage.\p");
-const u8 gText_KeepAnEyeOnHP[] = _("OAK: Keep your eyes on your\nPOKéMON's HP.\pIt will faint if the HP drops to\n“0.”\p");
-const u8 gText_OakNoRunningFromATrainer[] = _("OAK: No! There's no running away\nfrom a TRAINER POKéMON battle!\p");
-const u8 gText_WinEarnsPrizeMoney[] = _("OAK: Hm! Excellent!\pIf you win, you earn prize money,\nand your POKéMON will grow!\pBattle other TRAINERS and make\nyour POKéMON strong!\p");
-const u8 gText_HowDissapointing[] = _("OAK: Hm…\nHow disappointing…\pIf you win, you earn prize money,\nand your POKéMON grow.\pBut if you lose, {B_PLAYER_NAME}, you end\nup paying prize money…\pHowever, since you had no warning\nthis time, I'll pay for you.\pBut things won't be this way once\nyou step outside these doors.\pThat's why you must strengthen your\nPOKéMON by battling wild POKéMON.\p");
+const u8 gText_ForPetesSake[] = _("{B_TRAINER1_NAME}: Come on, {B_PLAYER_NAME}!\nIt's like in your GAMEBOY!\p{B_PLAYER_NAME}: You played on my\nGAMEBOY?!\p{B_TRAINER1_NAME}: ...a little...\p");
+const u8 gText_TheTrainerThat[] = _("TRAINERS are fighting until the\nother TRAINER's POKéMON faint.\pYou just have to lower the\nopponent's POKéMON HP to 0\p...\n...\pBut let's not hurt {B_OPPONENT_MON1_NAME} and\n{B_PLAYER_MON1_NAME} too much, okay?\p");
+const u8 gText_TryBattling[] = _("{B_PLAYER_NAME}: Okay...\n...\p");
+const u8 gText_InflictingDamageIsKey[] = _("{B_TRAINER1_NAME}: {B_OPPONENT_MON1_NAME},\nare you okay?\p");
+const u8 gText_LoweringStats[] = _("{B_TRAINER1_NAME}: Yes, {B_PLAYER_NAME},\njust like that!\pLowering {B_OPPONENT_MON1_NAME}'s stats\nis very helpful!\p");
+const u8 gText_KeepAnEyeOnHP[] = _("{B_TRAINER1_NAME}: Ouch! {B_PLAYER_MON1_NAME},\nare you okay?\pWatch out for its HP!\p");
+const u8 gText_OakNoRunningFromATrainer[] = _("{B_TRAINER1_NAME}: {B_PLAYER_NAME}, what's going on?\nAre you scared?\p");
+const u8 gText_WinEarnsPrizeMoney[] = _("{B_TRAINER1_NAME}: {B_OPPONENT_MON1_NAME}!\pWell... That was a fair fight.\nYou've earned that.\p");
+const u8 gText_HowDissapointing[] = _("{B_TRAINER1_NAME}: Ouch…\nI'm sorry…\pIs {B_PLAYER_MON1_NAME} all right?\p");
+static const u8 sText_NowWatchClosely[] = _("PROF. BLACKBIRD: Now watch\nclosely, kids...");
+static const u8 sText_AreYouReadyVill[] = _("VILL,\nare you ready?");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_START] = {
     [STRINGID_TRAINER1LOSETEXT - BATTLESTRINGS_TABLE_START]              = sText_Trainer1LoseText,
@@ -761,7 +763,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_NOPPLEFT - BATTLESTRINGS_TABLE_START]                      = sText_NoPPLeft,
     [STRINGID_BUTNOPPLEFT - BATTLESTRINGS_TABLE_START]                   = sText_ButNoPPLeft,
     [STRINGID_PLAYERUSEDITEM - BATTLESTRINGS_TABLE_START]                = sText_PlayerUsedItem,
-    [STRINGID_OLDMANUSEDITEM - BATTLESTRINGS_TABLE_START]                = sText_OldManUsedItem,
+    [STRINGID_BLACKBIRDUSEDITEM - BATTLESTRINGS_TABLE_START]             = sText_BlackbirdUsedItem,
     [STRINGID_TRAINERBLOCKEDBALL - BATTLESTRINGS_TABLE_START]            = sText_TrainerBlockedBall,
     [STRINGID_DONTBEATHIEF - BATTLESTRINGS_TABLE_START]                  = sText_DontBeAThief,
     [STRINGID_ITDODGEDBALL - BATTLESTRINGS_TABLE_START]                  = sText_ItDodgedBall,
@@ -888,7 +890,9 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT - BATTLESTRINGS_TABLE_ST
     [STRINGID_TRAINER1MON1COMEBACK - BATTLESTRINGS_TABLE_START]          = sText_Trainer1RecallPkmn1,
     [STRINGID_TRAINER1WINTEXT - BATTLESTRINGS_TABLE_START]               = sText_Trainer1WinText,
     [STRINGID_TRAINER1MON2COMEBACK - BATTLESTRINGS_TABLE_START]          = sText_Trainer1RecallPkmn2,
-    [STRINGID_TRAINER1MON1AND2COMEBACK - BATTLESTRINGS_TABLE_START]      = sText_Trainer1RecallBoth
+    [STRINGID_TRAINER1MON1AND2COMEBACK - BATTLESTRINGS_TABLE_START]      = sText_Trainer1RecallBoth,
+    [STRINGID_NOWWATCHCLOSELY - BATTLESTRINGS_TABLE_START]               = sText_NowWatchClosely,
+    [STRINGID_AREYOUREADYVILL - BATTLESTRINGS_TABLE_START]               = sText_AreYouReadyVill
 };
 
 const u16 gMissStringIds[] =
@@ -1277,7 +1281,7 @@ const u8 gText_PkmnStoppedEvolving[] = _("Huh? {STR_VAR_1}\nstopped evolving!\p"
 const u8 gText_EllipsisQuestionMark[] = _("……?\p");
 const u8 gText_WhatWillPkmnDo[] = _("What will\n{B_ACTIVE_NAME_WITH_PREFIX} do?");
 const u8 gText_WhatWillPlayerThrow[] = _("What will {B_PLAYER_NAME}\nthrow?");
-const u8 gText_WhatWillOldManDo[] = _("What will the\nold man do?");
+const u8 gText_WhatWillOldManDo[] = _("What will PROF.\nBLACKBIRD do?");
 const u8 gText_LinkStandby[] = _("{PAUSE 16}Link standby…");
 const u8 gText_BattleMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}FIGHT{CLEAR_TO 56}BAG\nPOKéMON{CLEAR_TO 56}RUN");
 const u8 gText_SafariZoneMenu[] = _("{PALETTE 5}{COLOR_HIGHLIGHT_SHADOW 13 14 15}BALL{CLEAR_TO 56}BAIT\nROCK{CLEAR_TO 56}RUN");

@@ -32,13 +32,13 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "PalletTown_ProfessorOaksLab_EventScript_CharmanderBall",
+      "flag": "FLAG_HIDE_CHARMANDER_BALL"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_GLACEON",
-      "x": 7,
+      "x": 6,
       "y": 8,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
@@ -46,8 +46,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "KailoLabYard_Vill",
+      "flag": "FLAG_HIDE_STARTER_SCENE"
     },
     {
       "type": "object",
@@ -60,22 +60,22 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "KailoLabYard_Victor",
+      "flag": "FLAG_HIDE_CUTSCENE_DUMMIES"
     },
     {
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_EEVEE",
-      "x": 4,
+      "x": 3,
       "y": 9,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "PalletTown_ProfessorOaksLab_EventScript_SquirtleBall",
+      "flag": "FLAG_HIDE_SQUIRTLE_BALL"
     },
     {
       "type": "object",
@@ -88,8 +88,64 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
+      "script": "PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall",
+      "flag": "FLAG_HIDE_BULBASAUR_BALL"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BLUE",
+      "x": 17,
+      "y": 7,
+      "elevation": 1,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_CUTSCENE_DUMMIES"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_EEVEE",
+      "x": 9,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_CUTSCENE_DUMMIES"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN",
+      "x": 3,
+      "y": 9,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_STARTER_SCENE"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_CUTSCENE_DUMMIES"
     }
   ],
   "warp_events": [
@@ -102,7 +158,24 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 18,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var_value": "1",
+      "script": "KailoLabYard_StartBlackbirdMeeting"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LABVAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var_value": "2",
+      "script": "KailoLabYard_YoriWhere"
+    }
   ],
   "bg_events": [
 

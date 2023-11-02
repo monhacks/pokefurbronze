@@ -1763,6 +1763,17 @@ const struct SpriteFrameImage gObjectEventPicTable_Eevee[] = {
     overworld_frame(gObjectEventPic_Eevee, 4, 4, 6),
     overworld_frame(gObjectEventPic_Eevee, 4, 4, 7),
     overworld_frame(gObjectEventPic_Eevee, 4, 4, 8),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 3),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 4),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 5),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 6),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 7),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 8),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 9),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 10),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 11),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 12),
+    overworld_frame(gObjectEventPic_EeveeSurfRun, 4, 4, 13),
 };
 
 const struct SpriteFrameImage gObjectEventPicTable_Glaceon[] = {

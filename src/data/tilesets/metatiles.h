@@ -204,3 +204,6 @@ const u32 gMetatileAttributes_HallOfFame[] = INCBIN_U32("data/tilesets/secondary
 
 const u16 gMetatiles_KailoTown[] = INCBIN_U16("data/tilesets/secondary/kailo_town/metatiles.bin");
 const u32 gMetatileAttributes_KailoTown[] = INCBIN_U32("data/tilesets/secondary/kailo_town/metatile_attributes.bin");
+
+const u16 gMetatiles_Heroes[] = INCBIN_U16("data/tilesets/secondary/heroes/metatiles.bin");
+const u32 gMetatileAttributes_Heroes[] = INCBIN_U32("data/tilesets/secondary/heroes/metatile_attributes.bin");

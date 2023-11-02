@@ -58,7 +58,11 @@ BattleScript_ThrowBall::
 	handleballthrow
 
 BattleScript_OldManThrowBall::
-	printstring STRINGID_OLDMANUSEDITEM
+	printstring STRINGID_NOWWATCHCLOSELY
+	waitmessage B_WAIT_TIME_LONG
+	printstring STRINGID_AREYOUREADYVILL
+	waitmessage B_WAIT_TIME_LONG
+	printstring STRINGID_BLACKBIRDUSEDITEM
 	handleballthrow
 
 BattleScript_PokedudeThrowBall::

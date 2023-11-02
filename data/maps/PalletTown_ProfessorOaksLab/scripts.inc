@@ -1075,27 +1075,37 @@ PalletTown_ProfessorOaksLab_Movement_RivalExit::
 	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
-	lock
+	lockall
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
-	setvar PLAYER_STARTER_SPECIES, SPECIES_BULBASAUR
-	setvar RIVAL_STARTER_SPECIES, SPECIES_CHARMANDER
+	setvar PLAYER_STARTER_SPECIES, SPECIES_EEVEE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
 	setvar RIVAL_STARTER_ID, LOCALID_CHARMANDER_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
 	msgbox PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls
-	release
+	releaseall
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice::
-	applymovement LOCALID_PROF_OAK, Common_Movement_FaceRight
-	waitmovement 0
+	applymovement LOCALID_VILL, KailoLabYard_Movement_StartBlackbirdMeeting_GilanLookVictor
+	call_if_eq PLAYER_STARTER_NUM, 0, PalletTown_ProfessorOaksLab_EventScript_TurnGilanMarie
+	call_if_eq PLAYER_STARTER_NUM, 1, PalletTown_ProfessorOaksLab_EventScript_TurnGilanMarie
+	call_if_eq PLAYER_STARTER_NUM, 2, PalletTown_ProfessorOaksLab_EventScript_TurnEverest
 	showmonpic PLAYER_STARTER_SPECIES, 10, 3
 	textcolor NPC_TEXT_COLOR_MALE
 	goto_if_eq PLAYER_STARTER_NUM, 0, PalletTown_ProfessorOaksLab_EventScript_ConfirmBulbasaur
-	goto_if_eq PLAYER_STARTER_NUM, 1, PalletTown_ProfessorOaksLab_EventScript_ConfirmSquirtle
+	goto_if_eq PLAYER_STARTER_NUM, 1, KailoLabYard_GilanChose
 	goto_if_eq PLAYER_STARTER_NUM, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmCharmander
 	end
+
+PalletTown_ProfessorOaksLab_EventScript_TurnGilanMarie::
+	applymovement LOCALID_VICTOR, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookMarie
+	return
+
+PalletTown_ProfessorOaksLab_EventScript_TurnEverest::
+	applymovement LOCALID_VICTOR, KailoLabYard_Movement_StartBlackbirdMeeting_MarieLookVictor
+	return
 
 PalletTown_ProfessorOaksLab_EventScript_ConfirmBulbasaur::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur, MSGBOX_YESNO
@@ -1117,12 +1127,15 @@ PalletTown_ProfessorOaksLab_EventScript_ConfirmCharmander::
 
 PalletTown_ProfessorOaksLab_EventScript_DeclinedStarter::
 	hidemonpic
-	release
+	releaseall
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_ChoseStarter::
+	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
 	hidemonpic
-	removeobject VAR_LAST_TALKED
+	waitmoncry
+	goto_if_eq PLAYER_STARTER_NUM, 0, PalletTown_ProfessorOaksLab_EventScript_ChoseMarie
+	goto_if_eq PLAYER_STARTER_NUM, 1, PalletTown_ProfessorOaksLab_EventScript_ChoseGilan
 	msgbox PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic
 	call EventScript_RestorePrevTextColor
 	setflag FLAG_SYS_POKEMON_GET
@@ -1131,6 +1144,40 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseStarter::
 	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
 	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
 	message PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak
+	waitmessage
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	waitfanfare
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_GiveNicknameToStarter
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_RivalPicksStarter
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_ChoseMarie::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakSheLikesYou
+	call EventScript_RestorePrevTextColor
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_PALLET_LADY_NOT_BLOCKING_SIGN
+	givemon PLAYER_STARTER_SPECIES, 5
+	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
+	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
+	message PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak
+	waitmessage
+	playfanfare MUS_OBTAIN_KEY_ITEM
+	waitfanfare
+	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, EventScript_GiveNicknameToStarter
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_RivalPicksStarter
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_ChoseGilan::
+	msgbox KailoLabYard_Text_StarBlackbirdMeeting_ChoseGilan
+	call EventScript_RestorePrevTextColor
+	setflag FLAG_SYS_POKEMON_GET
+	setflag FLAG_PALLET_LADY_NOT_BLOCKING_SIGN
+	givemon PLAYER_STARTER_SPECIES, 5
+	copyvar VAR_STARTER_MON, PLAYER_STARTER_NUM
+	bufferspeciesname STR_VAR_1, PLAYER_STARTER_SPECIES
+	message KailoLabYard_Text_StarBlackbirdMeeting_ReceivedMonFromYori
 	waitmessage
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	waitfanfare
@@ -1148,32 +1195,28 @@ EventScript_GiveNicknameToStarter::
 PalletTown_ProfessorOaksLab_EventScript_RivalPicksStarter::
 	closemessage
 	goto_if_eq PLAYER_STARTER_NUM, 0, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToCharmander
-	goto_if_eq PLAYER_STARTER_NUM, 1, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToBulbasaur
+	goto_if_eq PLAYER_STARTER_NUM, 1, KailoLabYard_StartBlackbirdMeeting_RivalWalksToBulbasaur
 	goto_if_eq PLAYER_STARTER_NUM, 2, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToSquirtle
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalWalksToCharmander::
-	applymovement LOCALID_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalWalksToCharmander
-	waitmovement 0
 	goto PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalWalksToSquirtle::
-	applymovement LOCALID_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalWalksToSquirtle
-	waitmovement 0
-	goto PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_RivalWalksToBulbasaur::
-	applymovement LOCALID_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalWalksToBulbasaur
-	waitmovement 0
 	goto PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter::
 	textcolor NPC_TEXT_COLOR_MALE
+	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
+	call_if_set FLAG_OPENED_START_MENU, PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene
+	goto KailoLabYard_Tutorial_GiveBall
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalTakesMarie::
+	textcolor NPC_TEXT_COLOR_MALE
 	msgbox PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen
-	removeobject RIVAL_STARTER_ID
 	textcolor NPC_TEXT_COLOR_NEUTRAL
 	bufferspeciesname STR_VAR_1, RIVAL_STARTER_SPECIES
 	message PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak
@@ -1182,7 +1225,7 @@ PalletTown_ProfessorOaksLab_EventScript_RivalTakesStarter::
 	waitfanfare
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3
 	call_if_set FLAG_OPENED_START_MENU, PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene
-	release
+	goto KailoLabYard_Tutorial_GiveBall
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyEndSignLadyScene::
@@ -1202,48 +1245,46 @@ PalletTown_ProfessorOaksLab_Movement_RivalWalksToCharmander::
 
 PalletTown_ProfessorOaksLab_Movement_RivalWalksToSquirtle::
 	walk_down
-	walk_right
-	walk_right
-	walk_right
-	walk_right
-	walk_in_place_faster_up
-	step_end
-
-PalletTown_ProfessorOaksLab_Movement_RivalWalksToBulbasaur::
 	walk_down
 	walk_right
 	walk_right
 	walk_right
+	walk_right
+	walk_up
+	step_end
+
+PalletTown_ProfessorOaksLab_Movement_RivalWalksToBulbasaur::
 	walk_in_place_faster_up
 	step_end
 
 PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
-	lock
+	lockall
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
-	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar PLAYER_STARTER_SPECIES, SPECIES_EEVEE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
 	setvar RIVAL_STARTER_ID, LOCALID_BULBASAUR_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
 	msgbox PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls
-	release
+	releaseall
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
-	lock
+	lockall
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
-	setvar PLAYER_STARTER_SPECIES, SPECIES_CHARMANDER
-	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
+	setvar PLAYER_STARTER_SPECIES, SPECIES_EEVEE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
 	msgbox PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls
-	release
+	releaseall
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_LastPokeBall::
+	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
 	msgbox PalletTown_ProfessorOaksLab_Text_OaksLastMon
 	release
 	end

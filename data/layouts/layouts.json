@@ -4421,7 +4421,7 @@
       "id": "LAYOUT_KAILO_TOWN_FAKE",
       "name": "KailoTownFake_Layout",
       "width": 39,
-      "height": 40,
+      "height": 28,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
@@ -4430,28 +4430,52 @@
       "blockdata_filepath": "data/layouts/KailoTownFake/map.bin"
     },
     {
-      "id": "LAYOUT_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
-      "name": "KailoTown_IndoorKailo_PlayersHouse_2F_Window_Layout",
+      "id": "LAYOUT_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
+      "name": "KailoTown_PlayersHouse_2F_Window_Layout",
       "width": 17,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_KailoTown",
-      "border_filepath": "data/layouts/KailoTown_IndoorKailo_PlayersHouse_2F_Window/border.bin",
-      "blockdata_filepath": "data/layouts/KailoTown_IndoorKailo_PlayersHouse_2F_Window/map.bin"
+      "border_filepath": "data/layouts/KailoTown_PlayersHouse_2F_Window/border.bin",
+      "blockdata_filepath": "data/layouts/KailoTown_PlayersHouse_2F_Window/map.bin"
     },
     {
-      "id": "LAYOUT_KAIKO_TOWN_DELICIOUS_CAFE",
-      "name": "KaikoTown_DeliciousCafe_Layout",
+      "id": "LAYOUT_KAILO_TOWN_DELICIOUS_CAFE",
+      "name": "KailoTown_DeliciousCafe_Layout",
       "width": 21,
       "height": 11,
       "border_width": 2,
       "border_height": 2,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Lab",
-      "border_filepath": "data/layouts/KaikoTown_DeliciousCafe/border.bin",
-      "blockdata_filepath": "data/layouts/KaikoTown_DeliciousCafe/map.bin"
+      "border_filepath": "data/layouts/KailoTown_DeliciousCafe/border.bin",
+      "blockdata_filepath": "data/layouts/KailoTown_DeliciousCafe/map.bin"
+    },
+    {
+      "id": "LAYOUT_HEROES",
+      "name": "Heroes_Layout",
+      "width": 15,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Heroes",
+      "border_filepath": "data/layouts/Heroes/border.bin",
+      "blockdata_filepath": "data/layouts/Heroes/map.bin"
+    },
+    {
+      "id": "LAYOUT_SAVIUM",
+      "name": "Savium_Layout",
+      "width": 1,
+      "height": 1,
+      "border_width": 1,
+      "border_height": 1,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_KailoTown",
+      "border_filepath": "data/layouts/Savium/border.bin",
+      "blockdata_filepath": "data/layouts/Savium/map.bin"
     }
   ]
 }

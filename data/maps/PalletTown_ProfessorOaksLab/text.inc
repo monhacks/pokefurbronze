@@ -16,11 +16,11 @@ PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer::
     .string "Go ahead and choose, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalIllTakeThisOneThen::
-    .string "{RIVAL}: I'll take this one, then!$"
+    .string "{RIVAL}: I'll take MARIE, then!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak::
     .string "{RIVAL} received the {STR_VAR_1}\n"
-    .string "from PROF. OAK!$"
+    .string "from PROF. BLACKBIRD!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher::
     .string "{RIVAL}: My POKéMON looks a lot\n"
@@ -100,31 +100,45 @@ PalletTown_ProfessorOaksLab_Text_OakHeyDontGoAwayYet::
     .string "OAK: Hey!\n"
     .string "Don't go away yet!$"
 
-PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
-    .string "Ah! CHARMANDER is your choice.\n"
-    .string "You should raise it patiently.\p"
-    .string "So, {PLAYER}, you're claiming the\n"
-    .string "FIRE POKéMON CHARMANDER?$"
+PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
+    .string "BLACKBIRD: Her name's MARIE.\n"
+    .string "She loves sunny and warm days...\l"
+    .string "...and she can also bite quite well.\p"
+    .string "Do you want her as your partner\n"
+    .string "for your journey... {PLAYER}?\p"
+    .string "Is that your name?\p"
+    .string "Do you want MARIE as your partner\n"
+    .string "for your journey, {PLAYER}?$"
 
 PalletTown_ProfessorOaksLab_Text_OakChoosingSquirtle::
-    .string "Hm! SQUIRTLE is your choice.\n"
-    .string "It's one worth raising.\p"
-    .string "So, {PLAYER}, you've decided on the\n"
-    .string "WATER POKéMON SQUIRTLE?$"
+    .string "So, do you want GILAN,\n"
+    .string "{PLAYER}?$"
 
-PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
-    .string "I see! BULBASAUR is your choice.\n"
-    .string "It's very easy to raise.\p"
-    .string "So, {PLAYER}, you want to go with\n"
-    .string "the GRASS POKéMON BULBASAUR?$"
+PalletTown_ProfessorOaksLab_Text_OakChoosingCharmander::
+    .string "BLACKBIRD: Well, his name is EVEREST.\n"
+    .string "What can I say...\p"
+    .string "He likes to sleep...\p"
+    .string "In this he can easily beat\n"
+    .string "the SNORLAX!\p"
+    .string "But when something needs to be\n"
+    .string "done he does it with such\l"
+    .string "enthusiasm...\p"
+    .string "I can't even describe it, you would\n"
+    .string "have to see that for yourself.\p"
+    .string "So, {PLAYER}, right? Do you want\n"
+    .string "to go with EVEREST?$"
 
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
-    .string "This POKéMON is really quite\n"
-    .string "energetic!$"
+    .string "He really likes you!\n"
+    .string "Sigh...$"
+
+PalletTown_ProfessorOaksLab_Text_OakSheLikesYou::
+    .string "She really likes you!\n"
+    .string "Sigh...$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
     .string "{PLAYER} received the {STR_VAR_1}\n"
-    .string "from PROF. OAK!$"
+    .string "from PROF. BLACKBIRD!$"
 
 PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon::
     .string "OAK: If a wild POKéMON appears,\n"
@@ -184,7 +198,7 @@ PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
     .string "catching wild POKéMON.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
-    .string "{PLAYER} received five POKé BALLS.$"
+    .string "{PLAYER} received the POKé BALL.$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
     .string "When a wild POKéMON appears,\n"
@@ -237,7 +251,7 @@ PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls::
     .string "They contain POKéMON!$"
 
 PalletTown_ProfessorOaksLab_Text_OaksLastMon::
-    .string "That's PROF. OAK's last POKéMON.$"
+    .string "Skrererere!$"
 
 PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu::
     .string "Press START to open the MENU!$"

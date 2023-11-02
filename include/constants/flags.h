@@ -534,8 +534,8 @@
 #define FLAG_HIDE_PLAYER         0x200
 #define FLAG_IS_INTRO_COMPLETED  0x201
 #define FLAG_HIDE_CUTSCENE_DUMMIES 0x202
-#define FLAG_0x203               0x203
-#define FLAG_0x204               0x204
+#define FLAG_GET_STARTER_CUTSCENE 0x203
+#define FLAG_HIDE_STARTER_SCENE  0x204
 #define FLAG_0x205               0x205
 #define FLAG_0x206               0x206
 #define FLAG_0x207               0x207

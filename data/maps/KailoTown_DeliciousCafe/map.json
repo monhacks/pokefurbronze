@@ -1,7 +1,7 @@
 {
-  "id": "MAP_KAIKO_TOWN_DELICIOUS_CAFE",
-  "name": "KaikoTown_DeliciousCafe",
-  "layout": "LAYOUT_KAIKO_TOWN_DELICIOUS_CAFE",
+  "id": "MAP_KAILO_TOWN_DELICIOUS_CAFE",
+  "name": "KailoTown_DeliciousCafe",
+  "layout": "LAYOUT_KAILO_TOWN_DELICIOUS_CAFE",
   "music": "MUS_PEWTER",
   "region_map_section": "MAPSEC_KAILO_TOWN",
   "requires_flash": false,

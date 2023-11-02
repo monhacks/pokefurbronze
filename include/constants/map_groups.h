@@ -199,6 +199,8 @@
 #define MAP_BIRTH_ISLAND_HARBOR                       (58 | (2 << 8))
 #define MAP_NAVEL_ROCK_HARBOR                         (59 | (2 << 8))
 #define MAP_KAILO_LAB_YARD                            (60 | (2 << 8))
+#define MAP_HEROES                                    (61 | (2 << 8))
+#define MAP_SAVIUM                                    (62 | (2 << 8))
 
 // gMapGroup_TownsAndRoutes
 #define MAP_PALLET_TOWN                          (0 | (3 << 8))
@@ -271,9 +273,9 @@
 #define MAP_KAILO_TOWN_FAKE                      (67 | (3 << 8))
 
 // gMapGroup_IndoorKailo
-#define MAP_KAILO_TOWN_PLAYERS_HOUSE_2F                     (0 | (4 << 8))
-#define MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW (1 | (4 << 8))
-#define MAP_KAIKO_TOWN_DELICIOUS_CAFE                       (2 | (4 << 8))
+#define MAP_KAILO_TOWN_PLAYERS_HOUSE_2F        (0 | (4 << 8))
+#define MAP_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW (1 | (4 << 8))
+#define MAP_KAILO_TOWN_DELICIOUS_CAFE          (2 | (4 << 8))
 
 // gMapGroup_IndoorPallet
 #define MAP_PALLET_TOWN_PLAYERS_HOUSE_1F   (0 | (5 << 8))

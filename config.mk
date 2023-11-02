@@ -11,14 +11,14 @@ MAKER_CODE  := 01
 
 # Version
 ifeq ($(GAME_VERSION),FIRERED)
-TITLE       := POKEMON FIRE
-GAME_CODE   := BPR
-BUILD_NAME  := firered
+TITLE       := POKEMON MIND
+GAME_CODE   := BPM
+BUILD_NAME  := mindpink
 else
 ifeq ($(GAME_VERSION),LEAFGREEN)
-TITLE       := POKEMON LEAF
-GAME_CODE   := BPG
-BUILD_NAME  := leafgreen
+TITLE       := POKEMON ICE
+GAME_CODE   := BPI
+BUILD_NAME  := iceturquoise
 else
 $(error unknown version $(GAME_VERSION))
 endif

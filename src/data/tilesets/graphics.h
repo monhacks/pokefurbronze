@@ -1426,3 +1426,22 @@ const u16 gTilesetPalettes_KailoTown[][16] =
 };
 
 const u32 gTilesetTiles_KailoTown[] = INCBIN_U32("data/tilesets/secondary/kailo_town/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_Heroes[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/heroes/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_Heroes[] = INCBIN_U32("data/tilesets/secondary/heroes/tiles.4bpp.lz");

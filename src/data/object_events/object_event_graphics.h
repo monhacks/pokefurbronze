@@ -233,5 +233,6 @@ const u16 gFieldEffectObjectPic_Bird[] = INCBIN_U16("graphics/field_effects/pics
 
 const u32 gObjectEventPic_Eevee[] = INCBIN_U32("graphics/object_events/pics/pokemon/eevee.4bpp");
 const u16 gObjectEventPal_Eevee[] = INCBIN_U16("graphics/object_events/pics/pokemon/eevee.gbapal");
+const u32 gObjectEventPic_EeveeSurfRun[] = INCBIN_U32("graphics/object_events/pics/pokemon/eevee_surf_run.4bpp");
 const u32 gObjectEventPic_Glaceon[] = INCBIN_U32("graphics/object_events/pics/pokemon/glaceon.4bpp");
 const u16 gObjectEventPal_Glaceon[] = INCBIN_U16("graphics/object_events/pics/pokemon/glaceon.gbapal");

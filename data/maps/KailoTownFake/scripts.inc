@@ -30,76 +30,76 @@ KailoTownFake_EventScript_IntroSetup::
   return
 
 KailoTownFake_EventScript_PuddleDebuggersCave::
-  setmetatile 14, 20, 0x1AA, 0
-  setmetatile 14, 21, 0x1B2, 0
-  setmetatile 12, 21, 0x1A8, 0
-  setmetatile 12, 20, 0x1A8, 0
-  setmetatile 13, 21, 0x1A9, 0
-  setmetatile 13, 20, 0x1A9, 0
+  setmetatile 14, 8, 0x1AA, 0
+  setmetatile 14, 9, 0x1B2, 0
+  setmetatile 12, 9, 0x1A8, 0
+  setmetatile 12, 8, 0x1A8, 0
+  setmetatile 13, 9, 0x1A9, 0
+  setmetatile 13, 8, 0x1A9, 0
   return
   
 KailoTownFake_EventScript_PuddleGym::
-  setmetatile 5, 18, 0x1A1, 0
-  setmetatile 5, 20, 0x1B1, 0
-  setmetatile 5, 19, 0x1A9, 0
+  setmetatile 5, 6, 0x1A1, 0
+  setmetatile 5, 8, 0x1B1, 0
+  setmetatile 5, 7, 0x1A9, 0
   return
 
 KailoTownFake_EventScript_PuddleLab::
-  setmetatile 8, 26, 0x1A2, 0
-  setmetatile 8, 27, 0x1AA, 0
-  setmetatile 8, 28, 0x1AA, 0
-  setmetatile 8, 29, 0x1B2, 0
-  setmetatile 5, 28, 0x1B1, 0
-  setmetatile 6, 28, 0x1B1, 0
-  setmetatile 4, 28, 0x1B0, 0
-  setmetatile 7, 29, 0x1B0, 0
-  setmetatile 4, 27, 0x1A8, 0
-  setmetatile 4, 26, 0x1A0, 0
-  setmetatile 6, 26, 0x1A9, 0
-  setmetatile 7, 26, 0x1A9, 0
-  setmetatile 5, 27, 0x1A9, 0
-  setmetatile 6, 27, 0x1A9, 0
-  setmetatile 7, 27, 0x1A9, 0
-  setmetatile 7, 28, 0x1A9, 0
+  setmetatile 8, 14, 0x1A2, 0
+  setmetatile 8, 15, 0x1AA, 0
+  setmetatile 8, 16, 0x1AA, 0
+  setmetatile 8, 17, 0x1B2, 0
+  setmetatile 5, 16, 0x1B1, 0
+  setmetatile 6, 16, 0x1B1, 0
+  setmetatile 4, 16, 0x1B0, 0
+  setmetatile 7, 17, 0x1B0, 0
+  setmetatile 4, 15, 0x1A8, 0
+  setmetatile 4, 14, 0x1A0, 0
+  setmetatile 6, 14, 0x1A9, 0
+  setmetatile 7, 14, 0x1A9, 0
+  setmetatile 5, 15, 0x1A9, 0
+  setmetatile 6, 15, 0x1A9, 0
+  setmetatile 7, 15, 0x1A9, 0
+  setmetatile 7, 16, 0x1A9, 0
   return
 
 KailoTownFake_EventScript_PuddleHause::
-  setmetatile 18, 23, 0x1AA, 0
-  setmetatile 18, 24, 0x1AA, 0
-  setmetatile 18, 25, 0x1AA, 0
-  setmetatile 18, 26, 0x1B2, 0
-  setmetatile 17, 26, 0x1B1, 0
-  setmetatile 16, 26, 0x1B1, 0
-  setmetatile 16, 24, 0x1A8, 0
-  setmetatile 16, 25, 0x1A8, 0
-  setmetatile 16, 23, 0x1A0, 0
-  setmetatile 17, 23, 0x1A9, 0
-  setmetatile 17, 24, 0x1A9, 0
-  setmetatile 17, 25, 0x1A9, 0
+  setmetatile 18, 11, 0x1AA, 0
+  setmetatile 18, 12, 0x1AA, 0
+  setmetatile 18, 13, 0x1AA, 0
+  setmetatile 18, 14, 0x1B2, 0
+  setmetatile 17, 14, 0x1B1, 0
+  setmetatile 16, 14, 0x1B1, 0
+  setmetatile 16, 12, 0x1A8, 0
+  setmetatile 16, 13, 0x1A8, 0
+  setmetatile 16, 11, 0x1A0, 0
+  setmetatile 17, 11, 0x1A9, 0
+  setmetatile 17, 12, 0x1A9, 0
+  setmetatile 17, 13, 0x1A9, 0
   return
 
 KailoTownFake_EventScript_PuddlePokemonCenter::
-  setmetatile 16, 30, 0x1A1, 0
-  setmetatile 17, 30, 0x1A1, 0
-  setmetatile 18, 30, 0x1A1, 0
-  setmetatile 19, 30, 0x1AA, 0
-  setmetatile 19, 31, 0x1AA, 0
-  setmetatile 19, 32, 0x1AA, 0
-  setmetatile 19, 33, 0x1B2, 0
-  setmetatile 18, 34, 0x1B2, 0
-  setmetatile 17, 34, 0x1B0, 0
-  setmetatile 16, 33, 0x1B0, 0
-  setmetatile 15, 32, 0x1B0, 0
-  setmetatile 15, 31, 0x1A8, 0
-  setmetatile 15, 30, 0x1A8, 0
-  setmetatile 16, 31, 0x1A9, 0
-  setmetatile 17, 31, 0x1A9, 0
-  setmetatile 18, 31, 0x1A9, 0
-  setmetatile 16, 32, 0x1A9, 0
-  setmetatile 17, 32, 0x1A9, 0
-  setmetatile 18, 32, 0x1A9, 0
-  setmetatile 17, 33, 0x1A9, 0
-  setmetatile 18, 33, 0x1A9, 0
+  setmetatile 16, 18, 0x1A1, 0
+  setmetatile 17, 18, 0x1A1, 0
+  setmetatile 18, 18, 0x1A1, 0
+  setmetatile 19, 18, 0x1AA, 0
+  setmetatile 19, 19, 0x1AA, 0
+  setmetatile 19, 20, 0x1AA, 0
+  setmetatile 19, 21, 0x1B2, 0
+  setmetatile 18, 22, 0x1B2, 0
+  setmetatile 17, 22, 0x1B0, 0
+  setmetatile 16, 21, 0x1B0, 0
+  setmetatile 15, 20, 0x1B0, 0
+  setmetatile 15, 19, 0x1A8, 0
+  setmetatile 15, 18, 0x1A8, 0
+  setmetatile 16, 19, 0x1A9, 0
+  setmetatile 17, 19, 0x1A9, 0
+  setmetatile 18, 19, 0x1A9, 0
+  setmetatile 16, 20, 0x1A9, 0
+  setmetatile 17, 20, 0x1A9, 0
+  setmetatile 18, 20, 0x1A9, 0
+  setmetatile 17, 21, 0x1A9, 0
+  setmetatile 18, 21, 0x1A9, 0
   return
 
 KailoTownFake_EventScript_IntroScript::
@@ -130,7 +130,7 @@ KailoTownFake_EventScript_IntroScript::
   applymovement LOCALID_DAMIEN, KailoTownFake_Movement_Intro_DamienOpenDoor
   waitmovement 0
   delay 30
-  opendoor 5, 16
+  opendoor 5, 4
   waitdooranim
   applymovement LOCALID_DAMIEN, KailoTownFake_Movement_Intro_DamienEnd
   waitmovement 0
@@ -151,7 +151,7 @@ KailoTownFake_EventScript_IntroScript::
   delay 50
   applymovement OBJ_EVENT_ID_CAMERA, KailoTownFake_Movement_Intro_ToLab
   waitmovement 0
-  opendoor 4, 25
+  opendoor 4, 13
   waitdooranim
   addobject LOCALID_VICTOR
   applymovement LOCALID_VICTOR, KailoTownFake_Movement_Intro_VictorStart

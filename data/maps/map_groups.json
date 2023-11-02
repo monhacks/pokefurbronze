@@ -238,7 +238,9 @@
     "OneIsland_KindleRoad_EmberSpa",
     "BirthIsland_Harbor",
     "NavelRock_Harbor",
-    "KailoLabYard"
+    "KailoLabYard",
+    "Heroes",
+    "Savium"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -312,8 +314,8 @@
   ],
   "gMapGroup_IndoorKailo": [
     "KailoTown_PlayersHouse_2F",
-    "KailoTown_IndoorKailo_PlayersHouse_2F_Window",
-    "KaikoTown_DeliciousCafe"
+    "KailoTown_PlayersHouse_2F_Window",
+    "KailoTown_DeliciousCafe"
   ],
   "gMapGroup_IndoorPallet": [
     "PalletTown_PlayersHouse_1F",

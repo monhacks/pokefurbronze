@@ -5,7 +5,7 @@ gNameChoice_Green::
     .string "PINK$"
 
 gNameChoice_Red::
-    .string "TURQUOISE$"
+    .string "TRQOISE$"
 
 gNameChoice_Leaf::
     .string "MIND$"
@@ -155,8 +155,8 @@ gControlsGuide_Text_LRButtons::
     .string "press the L or R Button.$"
 
 gOakSpeech_Text_AskPlayerGender::
-    .string "Now tell me. Are you a boy?\n"
-    .string "Or are you a girl?$"
+    .string "Are you a boy,\n"
+    .string "or a girl?$"
 
 gPikachuIntro_Text_Page1::
     .string "In the world which you are about to\n"
@@ -203,7 +203,7 @@ gOakSpeech_Text_ThisWorld::
 gOakSpeech_Text_IsInhabitedFarAndWide::
     .string "...\n"
     .string "...\p"
-    .string "SANDSLASH! Not now, please!\p"
+    .string "SANDSLASH!\pNot now, please!\p"
     .string "...\n"
     .string "...\p"
     .string "What was I talking about?\p" 
@@ -222,12 +222,11 @@ gOakSpeech_Text_IStudyPokemon::
     .string "This is my work and passion.\p$"
 
 gOakSpeech_Text_TellMeALittleAboutYourself::
-    .string "But first, tell me a something\n"
+    .string "But first, tell me something\n"
     .string "about yourself.\p$"
 
 gOakSpeech_Text_YourNameWhatIsIt::
-    .string "Let's begin with your name.\n"
-    .string "What is it?$"
+    .string "...and your name is...?\p$"
 
 gOakSpeech_Text_SoYourNameIsPlayer::
     .string "Okay...\n"
@@ -236,16 +235,17 @@ gOakSpeech_Text_SoYourNameIsPlayer::
 
 gOakSpeech_Text_WhatWasHisName::
     .string "This is your cousin.\p"
-    .string "You've always supported\n"
-    .string "each other since you\l"
-    .string "were babies.\p"
+    .string "You both always rely\n"
+    .string "on each other,\l"
+    .string "...or at least that's what your mom\l"
+    .string "told me...\p"
     .string "…can you remind me his name?\p$"
 
 gOakSpeech_Text_YourRivalsNameWhatWasIt::
-    .string "Your rival's name, what was it now?$"
+    .string "Your cousin's name, what was it now?$"
 
 gOakSpeech_Text_ConfirmRivalName::
-    .string "So, it is {RIVAL}, right?$"
+    .string "So, it's {RIVAL}, right?$"
 
 gOakSpeech_Text_RememberRivalsName::
     .string "Thank you.\p$"
@@ -253,7 +253,7 @@ gOakSpeech_Text_RememberRivalsName::
 gOakSpeech_Text_LetsGo::
     .string "So, {PLAYER}.\p"
     .string "Your very own POKéMON\n"
-    .string "adventure is about to unfold!\p"
+    .string "adventure is about to begin!\p"
     .string "A world of dreams and adventures\n"
     .string "with POKéMON awaits!\p"
     .string "Come, meet me in my Lab.\n"

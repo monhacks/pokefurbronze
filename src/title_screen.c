@@ -28,9 +28,9 @@ enum TitleScreenScene
 };
 
 #if   defined(FIRERED)
-#define TITLE_SPECIES SPECIES_VILL
-#elif defined(LEAFGREEN)
 #define TITLE_SPECIES SPECIES_ESPEON
+#elif defined(LEAFGREEN)
+#define TITLE_SPECIES SPECIES_VILL
 #endif
 
 static EWRAM_DATA u8 sTitleScreenTimerTaskId = 0;
@@ -301,7 +301,7 @@ static const struct SpritePalette sSpritePals[] = {
 };
 
 static const u8 sFlameXPositions[] = {
-    4, 16, 26, 32, 48, 200, 216, 224, 232, 60, 76, 92, 108, 128, 144, 0
+    4, 16, 32, 48, 200, 216, 232, 76, 92, 108, 128, 144, 0, 150, 175, 182, 168
 };
 
 #elif defined(LEAFGREEN)
@@ -319,7 +319,7 @@ static const struct SpritePalette sSpritePals[] = {
 };
 
 static const u16 sStreakYPositions[] = {
-    40, 80, 110, 60, 90, 70, 100, 50
+    40, 80, 110, 60, 90, 70, 100, 50, 75, 45, 55
 };
 #endif
 
@@ -1030,9 +1030,9 @@ static void Task_FlameSpawner(u8 taskId)
         {
             tTimer = 0;
             TitleScreen_rand(taskId, 3);
-            tDelay = 18;
-            xspeed = (TitleScreen_rand(taskId, 3) % 4) - 2;
-            yspeed = (TitleScreen_rand(taskId, 3) % 8) - 16;
+            tDelay = 1;
+            xspeed = (TitleScreen_rand(taskId, 3) % 0) - 0;
+            yspeed = (TitleScreen_rand(taskId, 3) % 64) - 128;
             y = (TitleScreen_rand(taskId, 3) % 3) + 116;
             x = TitleScreen_rand(taskId, 3) % DISPLAY_WIDTH;
             CreateFlameSprite(
@@ -1040,19 +1040,19 @@ static void Task_FlameSpawner(u8 taskId)
                 y,
                 xspeed,
                 yspeed,
-                (TitleScreen_rand(taskId, 3) % 16) < 8 ? FALSE : TRUE
+                (TitleScreen_rand(taskId, 3) % 16) < 32 ? FALSE : TRUE
             );
             for (i = 0; i < 15; i++)
             {
                 CreateFlameSprite(
-                    tOffsetX + sFlameXPositions[i],
+                    tOffsetX + sFlameXPositions[TitleScreen_rand(taskId,3)%16],
                     y,
                     xspeed,
                     yspeed,
                     TRUE
                 );
-                xspeed = (TitleScreen_rand(taskId, 3) % 4) - 2;
-                yspeed = (TitleScreen_rand(taskId, 3) % 8) - 16;
+                xspeed = (TitleScreen_rand(taskId, 3) % 0) - 0;
+                yspeed = (TitleScreen_rand(taskId, 3) % 64) - 128;
             }
             tOffsetX++;
             if (tOffsetX > 3)
@@ -1128,7 +1128,7 @@ static void SpriteCallback_Streak(struct Sprite *sprite)
     sprite->x -= 7;
     if (sprite->x < -16)
     {
-        sprite->x = DISPLAY_WIDTH + 16;
+        sprite->x = DISPLAY_WIDTH + 20;
         sprite->data[7]++;
         if (sprite->data[7] >= ARRAY_COUNT(sStreakYPositions))
             sprite->data[7] = 0;
@@ -1140,7 +1140,7 @@ static void CreateStreakSprites(void)
 {
     int i;
     u8 spriteId;
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < 12; i++)
     {
         spriteId = CreateSprite(&sSpriteTemplate_Streak, DISPLAY_WIDTH + 16 + 40 * i, sStreakYPositions[i], 0xFF);
         if (spriteId != MAX_SPRITES)
@@ -1178,12 +1178,12 @@ static void Task_LeafSpawner(u8 taskId)
             tTimer = 0;
             tDelay = (TitleScreen_rand(taskId, tOff_Seed) % 6) + 6;
             rval = TitleScreen_rand(taskId, tOff_Seed) % 30;
-            xspeed = 16;
+            xspeed = 32;
             if (rval >= 6)
             {
-                xspeed = 48;
+                xspeed = 96;
                 if (rval < 12)
-                    xspeed = 24;
+                    xspeed = 48;
             }
             yspeed = (TitleScreen_rand(taskId, tOff_Seed) % 4) - 2;
             y = (TitleScreen_rand(taskId, tOff_Seed) % 88) + 32;

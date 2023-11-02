@@ -29,35 +29,35 @@
       "x": 7,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
+      "dest_map": "MAP_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
       "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
+      "dest_map": "MAP_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
       "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
+      "dest_map": "MAP_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
       "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
+      "dest_map": "MAP_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
       "dest_warp_id": "0"
     },
     {
       "x": 9,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_KAILO_TOWN_INDOOR_KAILO_PLAYERS_HOUSE_2F_WINDOW",
+      "dest_map": "MAP_KAILO_TOWN_PLAYERS_HOUSE_2F_WINDOW",
       "dest_warp_id": "0"
     }
   ],

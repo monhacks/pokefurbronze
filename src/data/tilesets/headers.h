@@ -757,3 +757,14 @@ const struct Tileset gTileset_KailoTown =
     .metatileAttributes = gMetatileAttributes_KailoTown,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Heroes =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Heroes,
+    .palettes = gTilesetPalettes_Heroes,
+    .metatiles = gMetatiles_Heroes,
+    .metatileAttributes = gMetatileAttributes_Heroes,
+    .callback = NULL,
+};

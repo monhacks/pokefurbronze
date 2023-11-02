@@ -1371,8 +1371,14 @@ Text_TestMsg::
 	.include "data/maps/KailoTownFake/scripts.inc"
 	.include "data/maps/KailoTownFake/text.inc"
 
-	.include "data/maps/KailoTown_IndoorKailo_PlayersHouse_2F_Window/scripts.inc"
-	.include "data/maps/KailoTown_IndoorKailo_PlayersHouse_2F_Window/text.inc"
+	.include "data/maps/KailoTown_PlayersHouse_2F_Window/scripts.inc"
+	.include "data/maps/KailoTown_PlayersHouse_2F_Window/text.inc"
 
-	.include "data/maps/KaikoTown_DeliciousCafe/scripts.inc"
-	.include "data/maps/KaikoTown_DeliciousCafe/text.inc"
+	.include "data/maps/KailoTown_DeliciousCafe/scripts.inc"
+	.include "data/maps/KailoTown_DeliciousCafe/text.inc"
+
+	.include "data/maps/Heroes/scripts.inc"
+	.include "data/maps/Heroes/text.inc"
+
+	.include "data/maps/Savium/scripts.inc"
+	.include "data/maps/Savium/text.inc"

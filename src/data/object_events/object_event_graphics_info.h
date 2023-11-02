@@ -2957,7 +2957,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Eevee = {
     .tracks = TRACKS_FOOT,
     .oam = &gObjectEventBaseOam_32x32,
     .subspriteTables = gObjectEventSpriteOamTables_32x32,
-    .anims = sAnimTable_Standard,
+    .anims = sAnimTable_RedGreenNormal,
     .images = gObjectEventPicTable_Eevee,
     .affineAnims = gDummySpriteAffineAnimTable,
 };
+
