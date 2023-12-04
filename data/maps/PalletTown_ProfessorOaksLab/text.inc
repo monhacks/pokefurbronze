@@ -27,8 +27,8 @@ PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher::
     .string "tougher than yours.$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
-    .string "{RIVAL}: Wait, {PLAYER}!\n"
-    .string "Let's check out our POKéMON!\p"
+    .string "{RIVAL}: Hey, {PLAYER}!\n"
+    .string "Maybe let's do a batlle?\p"
     .string "Come on, I'll take you on!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalDefeat::

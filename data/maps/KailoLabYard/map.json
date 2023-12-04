@@ -172,9 +172,18 @@
       "x": 11,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LABVAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
       "var_value": "2",
       "script": "KailoLabYard_YoriWhere"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var_value": "3",
+      "script": "PalletTown_ProfessorOaksLab_EventScript_RivalBattle"
     }
   ],
   "bg_events": [

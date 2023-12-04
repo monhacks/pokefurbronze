@@ -186,3 +186,15 @@ KailoLabYard_Text_AfterTutorial_PlayerUsedBall::
 KailoLabYard_Text_StartBlackbirdMeeting_PlayerCaught::
 		.string "Gotcha!\n"
 		.string "{STR_VAR_1} was caught!$"
+
+KailoLabYard_Text_Victor_NoBattle::
+        .string "BLACKBIRD: No!\p"
+        .string "Please...\p"
+        .string "They're siblings, I don't want\n"
+        .string "to watch them getting hurt.$"
+
+KailoLabYard_Text_Yori_NoBattle::
+        .string "{RIVAL}: Okay, professor...$"
+
+KailoLabYard_Text_Yori_GoHome::
+        .string "Let's go home, {PLAYER}...$"

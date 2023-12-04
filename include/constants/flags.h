@@ -536,7 +536,7 @@
 #define FLAG_HIDE_CUTSCENE_DUMMIES 0x202
 #define FLAG_GET_STARTER_CUTSCENE 0x203
 #define FLAG_HIDE_STARTER_SCENE  0x204
-#define FLAG_0x205               0x205
+#define FLAG_GOT_STARTER         0x205
 #define FLAG_0x206               0x206
 #define FLAG_0x207               0x207
 #define FLAG_0x208               0x208

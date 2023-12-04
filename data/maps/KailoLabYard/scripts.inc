@@ -189,11 +189,11 @@ KailoLabYard_StartBlackbirdMeeting::
   closemessage
   setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
   textcolor NPC_TEXT_COLOR_NEUTRAL
-	bufferspeciesname STR_VAR_1, RIVAL_STARTER_SPECIES
-	message PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak
-	waitmessage
-	playfanfare MUS_OBTAIN_KEY_ITEM
-	waitfanfare
+  bufferspeciesname STR_VAR_1, RIVAL_STARTER_SPECIES
+  message PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak
+  waitmessage
+  playfanfare MUS_OBTAIN_KEY_ITEM
+  waitfanfare
   textcolor NPC_TEXT_COLOR_MALE
   setobjectmovementtype LOCALID_GILAN, MOVEMENT_TYPE_FACE_LEFT
   applymovement LOCALID_YORI, KailoLabYard_Movement_StartBlackbirdMeeting_YoriChosen
