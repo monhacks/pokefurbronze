@@ -73,5 +73,5 @@ static const u8 sWhiteoutRespawnHealerNpcIds[] =
     [SPAWN_SEVEN_ISLAND - 1] = 1,
     [SPAWN_SIX_ISLAND - 1] = 1,
     [SPAWN_KAILO_TOWN - 1] = 1,
-    [SPAWN_HOME - 1] = 1,
+    [SPAWN_HOME - 1] = 2,
 };

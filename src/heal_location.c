@@ -82,9 +82,9 @@ void SetWhiteoutRespawnWarpAndHealerNpc(struct WarpData * warp)
 
         if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(KAILO_TOWN_PLAYERS_HOUSE_2F) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(KAILO_TOWN_PLAYERS_HOUSE_2F))
         {
-			FlagClear(FLAG_WHITEOUT_VILL);
             warp->x = 1;
             warp->y = 5;
+            FlagClear(FLAG_WHITEOUT_VILL);
         }
         else if (sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][0] == MAP_GROUP(INDIGO_PLATEAU_POKEMON_CENTER_1F) && sWhiteoutRespawnHealCenterMapIdxs[healLocationIdx - 1][1] == MAP_NUM(INDIGO_PLATEAU_POKEMON_CENTER_1F))
         {
