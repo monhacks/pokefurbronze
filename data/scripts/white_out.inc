@@ -19,19 +19,64 @@ EventScript_AfterWhiteOutHealMsg::
 	msgbox Text_MonsHealed
 	return
 
-@ LOCALID_MOM set by PalletTown_PlayersHouse_1F
+@ LOCALID_VILL set by KailoTown_PlayersHouse_2F
 
 EventScript_AfterWhiteOutMomHeal::
 	lockall
-	textcolor NPC_TEXT_COLOR_FEMALE
-	applymovement LOCALID_MOM, Common_Movement_WalkInPlaceFasterDown
-	waitmovement 0
+	textcolor NPC_TEXT_COLOR_NEUTRAL
+	msgbox Text_YawnAfterFaint
+	playmoncry SPECIES_VILL, CRY_MODE_NORMAL
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, FaintedHouse_Movement
+	waitmoncry
 	msgbox Text_HadQuiteAnExperienceTakeRest
-	call EventScript_OutOfCenterPartyHeal
-	msgbox Text_MomExplainHPGetPotions
+	special HealPlayerParty
+	closemessage
+	playmoncry SPECIES_VILL, CRY_MODE_DOUBLES
+	waitmoncry
+	delay 25
+	applymovement LOCALID_VILL, FaintedHouse_Vill_Exit
+	waitmovement 0
+	removeobject LOCALID_VILL
+	setflag FLAG_WHITEOUT_VILL
+	applymovement OBJ_EVENT_ID_PLAYER, FaintedHouse_Get_Mon
+	waitmovement 0
+	removeobject LOCALID_BALL
+	message FaintedHouse_Got_Mon
+	waitmessage
+	playfanfare MUS_OBTAIN_ITEM
+	waitfanfare
+	closemessage
 	fadedefaultbgm
 	releaseall
 	end
+
+FaintedHouse_Get_Mon::
+    walk_right
+    walk_up
+    walk_up
+    walk_up
+    step_end
+
+FaintedHouse_Vill_Exit::
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+    walk_up
+    walk_right
+    step_end
+
+FaintedHouse_Movement::
+    emote_exclamation_mark
+    walk_in_place_faster_right
+    step_end
 
 EventScript_FieldPoison::
 	lockall

@@ -20,86 +20,8 @@ KailoTownFake_EventScript_IfIntroScript::
   end
 
 KailoTownFake_EventScript_IntroSetup::
-  call KailoTownFake_EventScript_PuddleDebuggersCave
-  call KailoTownFake_EventScript_PuddleLab
-  call KailoTownFake_EventScript_PuddleGym
-  call KailoTownFake_EventScript_PuddleHause
-  call KailoTownFake_EventScript_PuddlePokemonCenter
   setflag FLAG_HIDE_CUTSCENE_DUMMIES
   setflag FLAG_HIDE_PLAYER
-  return
-
-KailoTownFake_EventScript_PuddleDebuggersCave::
-  setmetatile 14, 8, 0x1AA, 0
-  setmetatile 14, 9, 0x1B2, 0
-  setmetatile 12, 9, 0x1A8, 0
-  setmetatile 12, 8, 0x1A8, 0
-  setmetatile 13, 9, 0x1A9, 0
-  setmetatile 13, 8, 0x1A9, 0
-  return
-  
-KailoTownFake_EventScript_PuddleGym::
-  setmetatile 5, 6, 0x1A1, 0
-  setmetatile 5, 8, 0x1B1, 0
-  setmetatile 5, 7, 0x1A9, 0
-  return
-
-KailoTownFake_EventScript_PuddleLab::
-  setmetatile 8, 14, 0x1A2, 0
-  setmetatile 8, 15, 0x1AA, 0
-  setmetatile 8, 16, 0x1AA, 0
-  setmetatile 8, 17, 0x1B2, 0
-  setmetatile 5, 16, 0x1B1, 0
-  setmetatile 6, 16, 0x1B1, 0
-  setmetatile 4, 16, 0x1B0, 0
-  setmetatile 7, 17, 0x1B0, 0
-  setmetatile 4, 15, 0x1A8, 0
-  setmetatile 4, 14, 0x1A0, 0
-  setmetatile 6, 14, 0x1A9, 0
-  setmetatile 7, 14, 0x1A9, 0
-  setmetatile 5, 15, 0x1A9, 0
-  setmetatile 6, 15, 0x1A9, 0
-  setmetatile 7, 15, 0x1A9, 0
-  setmetatile 7, 16, 0x1A9, 0
-  return
-
-KailoTownFake_EventScript_PuddleHause::
-  setmetatile 18, 11, 0x1AA, 0
-  setmetatile 18, 12, 0x1AA, 0
-  setmetatile 18, 13, 0x1AA, 0
-  setmetatile 18, 14, 0x1B2, 0
-  setmetatile 17, 14, 0x1B1, 0
-  setmetatile 16, 14, 0x1B1, 0
-  setmetatile 16, 12, 0x1A8, 0
-  setmetatile 16, 13, 0x1A8, 0
-  setmetatile 16, 11, 0x1A0, 0
-  setmetatile 17, 11, 0x1A9, 0
-  setmetatile 17, 12, 0x1A9, 0
-  setmetatile 17, 13, 0x1A9, 0
-  return
-
-KailoTownFake_EventScript_PuddlePokemonCenter::
-  setmetatile 16, 18, 0x1A1, 0
-  setmetatile 17, 18, 0x1A1, 0
-  setmetatile 18, 18, 0x1A1, 0
-  setmetatile 19, 18, 0x1AA, 0
-  setmetatile 19, 19, 0x1AA, 0
-  setmetatile 19, 20, 0x1AA, 0
-  setmetatile 19, 21, 0x1B2, 0
-  setmetatile 18, 22, 0x1B2, 0
-  setmetatile 17, 22, 0x1B0, 0
-  setmetatile 16, 21, 0x1B0, 0
-  setmetatile 15, 20, 0x1B0, 0
-  setmetatile 15, 19, 0x1A8, 0
-  setmetatile 15, 18, 0x1A8, 0
-  setmetatile 16, 19, 0x1A9, 0
-  setmetatile 17, 19, 0x1A9, 0
-  setmetatile 18, 19, 0x1A9, 0
-  setmetatile 16, 20, 0x1A9, 0
-  setmetatile 17, 20, 0x1A9, 0
-  setmetatile 18, 20, 0x1A9, 0
-  setmetatile 17, 21, 0x1A9, 0
-  setmetatile 18, 21, 0x1A9, 0
   return
 
 KailoTownFake_EventScript_IntroScript::
@@ -177,7 +99,10 @@ KailoTownFake_EventScript_IntroScript::
   fadescreen FADE_TO_WHITE
   setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1
   setflag FLAG_IS_INTRO_COMPLETED
+  setflag FLAG_WHITEOUT_VILL
+  setflag FLAG_HIDE_CUTSCENE_DUMMIES
   clearflag FLAG_HIDE_PLAYER
+  setrespawn SPAWN_HOME
   delay 85
   warpsilent MAP_KAILO_TOWN_PLAYERS_HOUSE_2F, 1, 5
   waitstate

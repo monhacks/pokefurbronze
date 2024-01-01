@@ -400,7 +400,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
         CopyWindowToVram(windowId, COPYWIN_FULL);
 
         // Scene changes if last heal location was the player's house
-        loc = GetHealLocation(SPAWN_PALLET_TOWN);
+        loc = GetHealLocation(SPAWN_HOME);
         if (gSaveBlock1Ptr->lastHealLocation.mapGroup == loc->group
          && gSaveBlock1Ptr->lastHealLocation.mapNum == loc->map
          && gSaveBlock1Ptr->lastHealLocation.warpId == WARP_ID_NONE
@@ -420,7 +420,7 @@ static void Task_RushInjuredPokemonToCenter(u8 taskId)
     case 4:
         if (PrintWhiteOutRecoveryMessage(taskId, gText_PlayerScurriedBackHome, 2, 8))
         {
-            ObjectEventTurn(&gObjectEvents[gPlayerAvatar.objectEventId], DIR_NORTH);
+            ObjectEventTurn(&gObjectEvents[gPlayerAvatar.objectEventId], DIR_WEST);
             gTasks[taskId].tState++;
         }
         break;

@@ -14,7 +14,7 @@ KailoTown_PlayersHouse_2F_Text_TooEarly::
     .string "Nah, it's too early.$"
 
 KailoTown_PlayersHouse_2F_Text_GBA::
-    .string "It's a Gameboy!\p"
+    .string "It's a GAMEBOY!\p"
     .string "...\n"
     .string "...\p"
     .string "Batteries drained...$"
@@ -40,3 +40,11 @@ KailoTown_PlayersHouse_2F_Text_Image::
     .string "...\p"
     .string "There's a gray pixel\n"
     .string "on the sky...$"
+
+KailoTown_PlayersHouse_2F_Text_Yori_BattleInit::
+    .string "{RIVAL}: Whew...\p"
+    .string "{PLAYER}...$"
+
+KailoTown_PlayersHouse_2F_Text_Yori_BattleInit2::
+    .string "Are you thinking\n"
+    .string "the same thing as me?$"

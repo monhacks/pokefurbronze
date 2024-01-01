@@ -74,6 +74,9 @@
 #define METATILE_GenericBuilding1_PlayersPCOff  0x28F
 #define METATILE_GenericBuilding1_PlayersPCOn   0x28A
 
+// gTileset_KailoTown
+#define METATILE_KailoTown_Plain_Grass  0x328
+
 // gTileset_LavenderTown
 #define METATILE_LavenderTown_Door  0x2A2
 

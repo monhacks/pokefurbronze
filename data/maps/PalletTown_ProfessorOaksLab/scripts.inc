@@ -317,28 +317,28 @@ PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleSquirtle::
 	applymovement LOCALID_YORI, PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattleSquirtle
 	waitmovement 0
 	delay 50
-	applymovement LOCALID_VICTOR, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
+	applymovement LOCALID_VICTOR, KailoLabYard_Movement_StartBlackbirdMeeting_Vill
 	applymovement LOCALID_VILL, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
-	waitmovement 0
+	playse SE_PIN
 	textcolor NPC_TEXT_COLOR_MALE
-	msgbox KailoLabYard_Text_Victor_NoBattle
+	message KailoLabYard_Text_Victor_NoBattle
+	fadeoutbgm 0
+	msgbox KailoLabYard_Text_Victor_NoBattle2
 	applymovement LOCALID_YORI, KailoLabYard_Movement_StartBlackbirdMeeting_GilanLookVictor
 	waitmovement 0
 	closemessage
+	playbgm MUS_PEWTER, 0
 	msgbox KailoLabYard_Text_Yori_NoBattle
 	applymovement LOCALID_YORI, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
 	waitmovement 0
 	msgbox KailoLabYard_Text_Yori_GoHome
+	setvar VAR_GOT_STARTER, 1
 	setflag FLAG_GOT_STARTER
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerLeavingYard
+	applymovement LOCALID_YORI, PalletTown_ProfessorOaksLab_Movement_RivalLeavingYard
 	delay 50
-	closemessage
-	warp MAP_KAILO_TOWN_PLAYERS_HOUSE_2F, 5, 5
-	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattleSquirtle
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_RivalBattleSquirtle::
-	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
-	goto PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle
+	warp MAP_KAILO_TOWN_PLAYERS_HOUSE_2F, 5, 4
 	end
 
 PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattleSquirtle::
@@ -353,81 +353,49 @@ PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattleSquirtle::
 	walk_right
 	step_end
 
+PalletTown_ProfessorOaksLab_Movement_PlayerLeavingYard::
+    walk_right
+    walk_right
+    walk_up
+    walk_right
+    walk_right
+    step_end
+
+PalletTown_ProfessorOaksLab_Movement_RivalLeavingYard::
+    walk_right
+    walk_right
+    walk_right
+    walk_up
+    walk_right
+    step_end
+
 PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleBulbasaur::
 	applymovement LOCALID_YORI, PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattleSquirtle
 	waitmovement 0
-	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattleBulbasaur
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_RivalBattleBulbasaur::
-	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_BULBASAUR, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
-	goto PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
-	special HealPlayerParty
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon
+	delay 50
+	applymovement LOCALID_VICTOR, KailoLabYard_Movement_StartBlackbirdMeeting_Vill
+	applymovement LOCALID_VILL, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
+	playse SE_PIN
+	textcolor NPC_TEXT_COLOR_MALE
+	message KailoLabYard_Text_Victor_NoBattle
+	fadeoutbgm 0
+	msgbox KailoLabYard_Text_Victor_NoBattle2
+	applymovement LOCALID_YORI, KailoLabYard_Movement_StartBlackbirdMeeting_GilanLookVictor
+	waitmovement 0
 	closemessage
-	playbgm MUS_RIVAL_EXIT, 0
-	call_if_eq VAR_TEMP_2, 1, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft
-	call_if_eq VAR_TEMP_2, 2, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleMid
-	call_if_eq VAR_TEMP_2, 3, PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleRight
-	removeobject LOCALID_RIVAL
-	playse SE_EXIT
-	fadedefaultbgm
-	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4
-	setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
-	releaseall
+	playbgm MUS_PEWTER, 0
+	msgbox KailoLabYard_Text_Yori_NoBattle
+	applymovement LOCALID_YORI, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
+	waitmovement 0
+	msgbox KailoLabYard_Text_Yori_GoHome
+	setvar VAR_GOT_STARTER, 2
+	setflag FLAG_GOT_STARTER
+	special SpawnCameraObject
+	applymovement OBJ_EVENT_ID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerLeavingYard
+	applymovement LOCALID_YORI, PalletTown_ProfessorOaksLab_Movement_RivalLeavingYard
+	delay 50
+	warp MAP_KAILO_TOWN_PLAYERS_HOUSE_2F, 5, 4
 	end
-
-PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft::
-	applymovement LOCALID_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleLeft
-	applymovement OBJ_EVENT_ID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
-	waitmovement LOCALID_RIVAL
-	return
-
-PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleMid::
-	applymovement LOCALID_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleMid
-	applymovement OBJ_EVENT_ID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
-	waitmovement LOCALID_RIVAL
-	return
-
-PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleRight::
-	applymovement LOCALID_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleRight
-	applymovement OBJ_EVENT_ID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattleRight
-	waitmovement LOCALID_RIVAL
-	return
-
-PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleLeft::
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	delay_8
-	step_end
-
-PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleRight::
-	walk_left
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	walk_down
-	delay_8
-	step_end
-
-PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleMid::
-	walk_right
-	walk_down
-	walk_down
-	walk_down
-	walk_left
-	walk_down
-	walk_down
-	delay_8
-	step_end
 
 PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle::
 	delay_16

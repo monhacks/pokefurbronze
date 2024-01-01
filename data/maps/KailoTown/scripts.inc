@@ -17,11 +17,13 @@ KailoTown_OnTransition::
 
 KailoTown_OnLoad::
   call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 1, KailoTown_EventScript_AfterRain
+  call_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4, KailoTown_EventScript_AfterRain
+  call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_MART, 1, KailoTown_EventScript_AfterRain
   end
 
 KailoTown_EventScript_AfterRain::
   call KailoTown_EventScript_PuddleDebuggersCave
-  call KailoTown_EventScript_PuddleHause
+  call KailoTown_EventScript_PuddleHouse
   call KailoTown_EventScript_PuddlePokemonCenter
   end
 
@@ -34,14 +36,17 @@ KailoTown_EventScript_PuddleDebuggersCave::
   setmetatile 13, 8, 0x1A9, 0
   return
 
-KailoTown_EventScript_PuddleHause::
+KailoTown_EventScript_PuddleHouse::
   setmetatile 18, 11, 0x1AA, 0
   setmetatile 18, 12, 0x1AA, 0
   setmetatile 18, 13, 0x1AA, 0
   setmetatile 18, 14, 0x1B2, 0
-  setmetatile 17, 14, 0x1B1, 0
-  setmetatile 16, 14, 0x1B1, 0
-  setmetatile 16, 12, 0x1A8, 0
+  setmetatile 17, 14, 0x1A9, 0
+  setmetatile 17, 15, 0x302, 0
+  setmetatile 16, 16, 0x309, 0
+  setmetatile 16, 15, 0x2FF, 1
+  setmetatile 16, 14, 0x31E, 0
+  setmetatile 16, 12, 0x1A9, 0
   setmetatile 16, 13, 0x1A8, 0
   setmetatile 16, 11, 0x1A0, 0
   setmetatile 17, 11, 0x1A9, 0
@@ -53,10 +58,10 @@ KailoTown_EventScript_PuddlePokemonCenter::
   setmetatile 16, 18, 0x1A1, 0
   setmetatile 17, 18, 0x1A1, 0
   setmetatile 18, 18, 0x1A1, 0
-  setmetatile 19, 18, 0x1AA, 0
+  setmetatile 19, 18, 0x320, 0
   setmetatile 19, 19, 0x1AA, 0
   setmetatile 19, 20, 0x1AA, 0
-  setmetatile 19, 21, 0x1B2, 0
+  setmetatile 19, 21, 0x302, 0
   setmetatile 18, 22, 0x1B2, 0
   setmetatile 17, 22, 0x1B0, 0
   setmetatile 16, 21, 0x1B0, 0

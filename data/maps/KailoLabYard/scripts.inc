@@ -734,6 +734,7 @@ KailoLabYard_AfterTutorial_PlayerCatchEverest::
   playse SE_BALL_TRAY_ENTER
   delay 15
   setflag FLAG_HIDE_CHARMANDER_BALL
+  setflag FLAG_HIDE_BULBASAUR_BALL
   setobjectmovementtype LOCALID_EVEREST, MOVEMENT_TYPE_INVISIBLE
   removeobject LOCALID_EVEREST
   addobject LOCALID_EVEREST
@@ -741,7 +742,6 @@ KailoLabYard_AfterTutorial_PlayerCatchEverest::
   goto KailoLabYard_PlayerCatching
   release
   end
-  
 
 KailoLabYard_AfterTutorial_PlayerCatchMarie::
   applymovement LOCALID_YORI KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
@@ -772,6 +772,7 @@ KailoLabYard_AfterTutorial_PlayerCatchMarie::
   playse SE_BALL_TRAY_ENTER
   delay 15
   setflag FLAG_HIDE_BULBASAUR_BALL
+  setflag FLAG_HIDE_CHARMANDER_BALL
   setobjectmovementtype LOCALID_MARIE, MOVEMENT_TYPE_INVISIBLE
   removeobject LOCALID_MARIE
   addobject LOCALID_MARIE
@@ -808,6 +809,7 @@ KailoLabYard_AfterTutorial_PlayerCatchGilan::
   playse SE_BALL_TRAY_ENTER
   delay 15
   setflag FLAG_HIDE_SQUIRTLE_BALL
+  setflag FLAG_HIDE_CHARMANDER_BALL
   setobjectmovementtype LOCALID_GILAN, MOVEMENT_TYPE_INVISIBLE
   removeobject LOCALID_GILAN
   addobject LOCALID_GILAN
@@ -923,5 +925,12 @@ KailoLabYard_Victor_Whisper::
   closemessage
   applymovement LOCALID_VICTOR, KailoLabYard_Movement_StartBlackbirdMeeting_GilanLookVictor
   waitmovement 0
+  release
+  end
+
+KailoLabYard_YoriVill::
+  lock
+  faceplayer
+  msgbox KailoLabYard_Text_YoriVill
   release
   end

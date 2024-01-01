@@ -4476,6 +4476,18 @@
       "secondary_tileset": "gTileset_KailoTown",
       "border_filepath": "data/layouts/Savium/border.bin",
       "blockdata_filepath": "data/layouts/Savium/map.bin"
+    },
+    {
+      "id": "LAYOUT_KAILO_TOWN_POKEMON_CENTER_1F",
+      "name": "KailoTown_PokemonCenter_1F_Layout",
+      "width": 15,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/KailoTown_PokemonCenter_1F/border.bin",
+      "blockdata_filepath": "data/layouts/KailoTown_PokemonCenter_1F/map.bin"
     }
   ]
 }

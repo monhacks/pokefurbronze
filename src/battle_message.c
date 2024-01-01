@@ -511,8 +511,8 @@ const u8 gText_InflictingDamageIsKey[] = _("{B_TRAINER1_NAME}: {B_OPPONENT_MON1_
 const u8 gText_LoweringStats[] = _("{B_TRAINER1_NAME}: Yes, {B_PLAYER_NAME},\njust like that!\pLowering {B_OPPONENT_MON1_NAME}'s stats\nis very helpful!\p");
 const u8 gText_KeepAnEyeOnHP[] = _("{B_TRAINER1_NAME}: Ouch! {B_PLAYER_MON1_NAME},\nare you okay?\pWatch out for its HP!\p");
 const u8 gText_OakNoRunningFromATrainer[] = _("{B_TRAINER1_NAME}: {B_PLAYER_NAME}, what's going on?\nAre you scared?\p");
-const u8 gText_WinEarnsPrizeMoney[] = _("{B_TRAINER1_NAME}: {B_OPPONENT_MON1_NAME}!\pWell... That was a fair fight.\nYou've earned that.\p");
-const u8 gText_HowDissapointing[] = _("{B_TRAINER1_NAME}: Ouch…\nI'm sorry…\pIs {B_PLAYER_MON1_NAME} all right?\p");
+const u8 gText_WinEarnsPrizeMoney[] = _("{B_TRAINER1_NAME}: Well...\nI hope {B_OPPONENT_MON1_NAME}'s OK...\p");
+const u8 gText_HowDissapointing[] = _("{B_TRAINER1_NAME}: I hope {B_PLAYER_MON1_NAME}\nis all right...\p");
 static const u8 sText_NowWatchClosely[] = _("PROF. BLACKBIRD: Now watch\nclosely, kids...");
 static const u8 sText_AreYouReadyVill[] = _("VILL,\nare you ready?");
 

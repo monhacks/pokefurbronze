@@ -141,18 +141,11 @@
   ],
   "warp_events": [
     {
-      "x": 9,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_PALLET_TOWN",
-      "dest_warp_id": "3"
-    },
-    {
-      "x": 7,
-      "y": 2,
+      "x": 3,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_KAILO_TOWN",
-      "dest_warp_id": "0"
+      "dest_warp_id": "5"
     }
   ],
   "coord_events": [

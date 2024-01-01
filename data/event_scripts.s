@@ -1382,3 +1382,6 @@ Text_TestMsg::
 
 	.include "data/maps/Savium/scripts.inc"
 	.include "data/maps/Savium/text.inc"
+
+	.include "data/maps/KailoTown_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/KailoTown_PokemonCenter_1F/text.inc"

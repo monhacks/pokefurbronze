@@ -188,7 +188,9 @@ KailoLabYard_Text_StartBlackbirdMeeting_PlayerCaught::
 		.string "{STR_VAR_1} was caught!$"
 
 KailoLabYard_Text_Victor_NoBattle::
-        .string "BLACKBIRD: No!\p"
+        .string "BLACKBIRD: No!$"
+
+KailoLabYard_Text_Victor_NoBattle2::
         .string "Please...\p"
         .string "They're siblings, I don't want\n"
         .string "to watch them getting hurt.$"
@@ -198,3 +200,11 @@ KailoLabYard_Text_Yori_NoBattle::
 
 KailoLabYard_Text_Yori_GoHome::
         .string "Let's go home, {PLAYER}...$"
+
+KailoLabYard_Text_YoriVill::
+        .string "{RIVAL}: {PLAYER}...\n"
+        .string "What do you think?\l"
+        .string "What's that blue POKéMON?\p"
+        .string "...\p"
+        .string "...yeah...\n"
+        .string "I don't know either...$"

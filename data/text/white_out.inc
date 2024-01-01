@@ -17,28 +17,33 @@ Text_MonsHealed::
 	.string "to perfect health.\p"
 	.string "We hope you excel!$"
 
-Text_HadQuiteAnExperienceTakeRest::
-	.string "MOM: {PLAYER}!\n"
-	.string "Welcome home.\p"
-	.string "It sounds like you had quite\n"
-	.string "an experience.\p"
-	.string "Maybe you should take a quick\n"
-	.string "rest.$"
+Text_YawnAfterFaint::
+    .string "Yawn...\n"
+    .string ".......$"
 
-Text_MomExplainHPGetPotions::
-	.string "MOM: Oh, good! You and your\n"
-	.string "POKéMON are looking great.\p"
-	.string "I just heard from PROF. OAK.\p"
-	.string "He said that POKéMON's energy is\n"
-	.string "measured in HP.\p"
-	.string "If your POKéMON lose their HP,\n"
-	.string "you can restore them at any\l"
-	.string "POKéMON CENTER.\p"
-	.string "If you're going to travel far away,\n"
-	.string "the smart TRAINER stocks up on\l"
-	.string "POTIONS at the POKéMON MART.\p"
-	.string "Make me proud, honey!\p"
-	.string "Take care!$"
+Text_HadQuiteAnExperienceTakeRest::
+	.string "The POKéMON is holding\n"
+	.string "a MAIL.\p"
+	.string "“{PLAYER},\p"
+	.string "I couldn't wait for you to wake up,\n"
+	.string "I had a lot of work at the VALLEY,\l"
+	.string "so I sent VILL to take care of you.\p"
+    .string "You had a quite rough battle,\n"
+    .string "I hope you had a good rest.\p"
+    .string "I took your POKéMON and left them\n"
+    .string "healed on your shelf, so they're\l"
+    .string "ready for your next adventure.\p"
+    .string "Remember to keep some POTIONS\n"
+    .string "in your pack.\p"
+    .string "you can buy them from DIRK,\n"
+    .string "the shopkeeper at POKéMON CENTER.\p"
+    .string "\n"
+    .string "Take care of my EEVEE,\l"
+    .string "PROF. BLACKBIRD“$"
+
+FaintedHouse_Got_Mon::
+	.string "{PLAYER} obtained\n"
+	.string "POKéMON!$"
 
 Text_WhitedOutLostMoney::
 	.string "{PLAYER} is out of usable\n"

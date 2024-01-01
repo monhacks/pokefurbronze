@@ -1,11 +1,95 @@
+.equ LOCALID_YORI, 1
+.equ LOCALID_VILL, 2
+
 KailoTown_PlayersHouse_2F_MapScripts::
+  map_script MAP_SCRIPT_ON_FRAME_TABLE, KailoTown_PlayersHouse_2F_OnFrame
+  map_script MAP_SCRIPT_ON_LOAD, KailoTown_PlayersHouse_2F_OnLoad
 	.byte 0
+
+KailoTown_PlayersHouse_2F_OnFrame::
+    map_script_2 VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, KailoTown_PlayersHouse_2F_EventScript_Battle_Setup2
+    .2byte 0
+
+KailoTown_PlayersHouse_2F_OnLoad::
+  goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, KailoTown_PlayersHouse_2F_EventScript_Battle_Setup
+  end
+
+KailoTown_PlayersHouse_2F_EventScript_Battle_Setup::
+  goto_if_eq VAR_GOT_STARTER, 1, KailoTown_PlayersHouse_2F_EventScript_BattleInit
+  goto_if_eq VAR_GOT_STARTER, 2, KailoTown_PlayersHouse_2F_EventScript_BattleInit
+
+KailoTown_PlayersHouse_2F_EventScript_Battle_Setup2::
+  goto_if_eq VAR_GOT_STARTER, 1, KailoTown_PlayersHouse_2F_EventScript_Battle_Gilan
+  goto_if_eq VAR_GOT_STARTER, 2, KailoTown_PlayersHouse_2F_EventScript_Battle_Marie
+
+KailoTown_PlayersHouse_2F_EventScript_BattleInit::
+  clearflag FLAG_HIDE_CUTSCENE_DUMMIES
+  addobject LOCALID_YORI
+  end
+
+KailoTown_PlayersHouse_2F_EventScript_Battle_Gilan::
+  textcolor NPC_TEXT_COLOR_MALE
+  msgbox KailoTown_PlayersHouse_2F_Text_Yori_BattleInit
+  playbgm MUS_ENCOUNTER_RIVAL, 0
+  setflag FLAG_HIDE_CUTSCENE_DUMMIES
+  setvar VAR_GOT_STARTER, 3
+  msgbox KailoTown_PlayersHouse_2F_Text_Yori_BattleInit2
+  goto KailoTown_PlayersHouse_2F_EventScript_RivalBattleSquirtle
+  end
+
+KailoTown_PlayersHouse_2F_EventScript_Battle_Marie::
+  textcolor NPC_TEXT_COLOR_MALE
+  msgbox KailoTown_PlayersHouse_2F_Text_Yori_BattleInit
+  playbgm MUS_ENCOUNTER_RIVAL, 0
+  setflag FLAG_HIDE_CUTSCENE_DUMMIES
+  setvar VAR_GOT_STARTER, 3
+  msgbox KailoTown_PlayersHouse_2F_Text_Yori_BattleInit2
+  goto KailoTown_PlayersHouse_2F_EventScript_RivalBattleBulbasaur
+  end
+
+KailoTown_PlayersHouse_2F_EventScript_RivalBattleSquirtle::
+  trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
+  goto KailoTown_PlayersHouse_2F_EventScript_EndRivalBattle
+  end
+
+KailoTown_PlayersHouse_2F_EventScript_RivalBattleBulbasaur::
+  trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_BULBASAUR, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
+  goto KailoTown_PlayersHouse_2F_EventScript_EndRivalBattle
+  end
+
+KailoTown_PlayersHouse_2F_EventScript_EndRivalBattle::
+  special HealPlayerParty
+  msgbox PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon
+  closemessage
+  playbgm MUS_RIVAL_EXIT, 0
+  applymovement LOCALID_YORI, KailoTown_PlayersHouse_2F_Movement_RivalExitAfterBattle
+  waitmovement 0
+  removeobject LOCALID_YORI
+  playse SE_EXIT
+  fadedefaultbgm
+  setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 4
+  setflag FLAG_BEAT_RIVAL_IN_OAKS_LAB
+  releaseall
+  end
+
+KailoTown_PlayersHouse_2F_Movement_RivalExitAfterBattle::
+  walk_right
+  walk_right
+  walk_right
+  walk_right
+  walk_up
+  walk_right
+  walk_right
+  walk_up
+  walk_up
+  walk_left
+  step_end
 
 KailoTown_PlayersHouse_2F_EventScript_Bed::
   lock
   msgbox KailoTown_PlayersHouse_2F_Text_WantSleep, MSGBOX_YESNO
   goto_if_eq VAR_RESULT, YES, KailoTown_PlayersHouse_2F_EventScript_Sleep
-	goto_if_eq VAR_RESULT, NO, KailoTown_PlayersHouse_2F_EventScript_NoSleep
+  goto_if_eq VAR_RESULT, NO, KailoTown_PlayersHouse_2F_EventScript_NoSleep
   closemessage
   release
   end

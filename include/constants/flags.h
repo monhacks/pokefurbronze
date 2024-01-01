@@ -537,8 +537,8 @@
 #define FLAG_GET_STARTER_CUTSCENE 0x203
 #define FLAG_HIDE_STARTER_SCENE  0x204
 #define FLAG_GOT_STARTER         0x205
-#define FLAG_0x206               0x206
-#define FLAG_0x207               0x207
+#define FLAG_WHITEOUT_VILL       0x206
+#define FLAG_WHITEOUT_RESET      0x207
 #define FLAG_0x208               0x208
 #define FLAG_0x209               0x209
 #define FLAG_0x20A               0x20A
