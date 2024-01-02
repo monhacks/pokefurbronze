@@ -21,7 +21,7 @@ static const struct HealLocation sSpawnPoints[] =
     [SPAWN_SEVEN_ISLAND - 1] = {MAP_GROUP(SEVEN_ISLAND), MAP_NUM(SEVEN_ISLAND), 12, 4},
     [SPAWN_SIX_ISLAND - 1] = {MAP_GROUP(SIX_ISLAND), MAP_NUM(SIX_ISLAND), 11, 12},
     [SPAWN_KAILO_TOWN - 1] = {MAP_GROUP(KAILO_TOWN), MAP_NUM(KAILO_TOWN), 21, 18},
-    [SPAWN_HOME - 1] = {MAP_GROUP(KAILO_TOWN), MAP_NUM(KAILO_TOWN), 20, 11},
+    [SPAWN_HOME - 1] = {MAP_GROUP(KAILO_TOWN_PLAYERS_HOUSE_2F), MAP_NUM(KAILO_TOWN_PLAYERS_HOUSE_2F), 1, 5},
 };
 
 static const u16 sWhiteoutRespawnHealCenterMapIdxs[][2] =
@@ -73,5 +73,5 @@ static const u8 sWhiteoutRespawnHealerNpcIds[] =
     [SPAWN_SEVEN_ISLAND - 1] = 1,
     [SPAWN_SIX_ISLAND - 1] = 1,
     [SPAWN_KAILO_TOWN - 1] = 1,
-    [SPAWN_HOME - 1] = 2,
+    [SPAWN_HOME - 1] = 1,
 };

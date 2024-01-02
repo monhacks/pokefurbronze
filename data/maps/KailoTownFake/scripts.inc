@@ -102,7 +102,6 @@ KailoTownFake_EventScript_IntroScript::
   setflag FLAG_WHITEOUT_VILL
   setflag FLAG_HIDE_CUTSCENE_DUMMIES
   clearflag FLAG_HIDE_PLAYER
-  setrespawn SPAWN_HOME
   delay 85
   warpsilent MAP_KAILO_TOWN_PLAYERS_HOUSE_2F, 1, 5
   waitstate

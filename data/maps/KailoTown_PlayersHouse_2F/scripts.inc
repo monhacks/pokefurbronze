@@ -4,6 +4,8 @@
 KailoTown_PlayersHouse_2F_MapScripts::
   map_script MAP_SCRIPT_ON_FRAME_TABLE, KailoTown_PlayersHouse_2F_OnFrame
   map_script MAP_SCRIPT_ON_LOAD, KailoTown_PlayersHouse_2F_OnLoad
+  map_script MAP_SCRIPT_ON_TRANSITION, KailoTown_PlayersHouse_2F_OnTransition
+  map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, KailoTown_PlayersHouse_2F_OnWarp
 	.byte 0
 
 KailoTown_PlayersHouse_2F_OnFrame::
@@ -13,6 +15,29 @@ KailoTown_PlayersHouse_2F_OnFrame::
 KailoTown_PlayersHouse_2F_OnLoad::
   goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, KailoTown_PlayersHouse_2F_EventScript_Battle_Setup
   end
+
+
+
+
+KailoTown_PlayersHouse_2F_OnTransition::
+	call_if_eq VAR_MAP_SCENE_KAILO_TOWN_PLAYERS_HOUSE_2F, 0, KailoTown_PlayersHouse_2F_EventScript_SetRespawn
+	end
+
+KailoTown_PlayersHouse_2F_EventScript_SetRespawn::
+	setrespawn SPAWN_HOME
+	return
+
+KailoTown_PlayersHouse_2F_OnWarp::
+	map_script_2 VAR_MAP_SCENE_KAILO_TOWN_PLAYERS_HOUSE_2F, 0, KailoTown_PlayersHouse_2F_FirstWarpIn
+	.2byte 0
+
+KailoTown_PlayersHouse_2F_FirstWarpIn::
+	setvar VAR_MAP_SCENE_KAILO_TOWN_PLAYERS_HOUSE_2F, 1
+	end
+
+
+
+
 
 KailoTown_PlayersHouse_2F_EventScript_Battle_Setup::
   goto_if_eq VAR_GOT_STARTER, 1, KailoTown_PlayersHouse_2F_EventScript_BattleInit
