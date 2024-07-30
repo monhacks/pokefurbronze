@@ -3721,7 +3721,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabSquirtle[] =
     {
         .iv = 0,
         .lvl = 5,
-        .species = SPECIES_EEVEE,
+        .species = SPECIES_GILAN,
+        .pokeball = ITEM_SHADOW_BALL
     },
 };
 
@@ -3729,7 +3730,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabBulbasaur[] 
     {
         .iv = 0,
         .lvl = 5,
-        .species = SPECIES_EEVEE,
+        .species = SPECIES_MARIE,
+        .pokeball = ITEM_SHADOW_BALL
     },
 };
 
@@ -3737,7 +3739,8 @@ static const struct TrainerMonNoItemDefaultMoves sParty_RivalOaksLabCharmander[]
     {
         .iv = 0,
         .lvl = 5,
-        .species = SPECIES_EEVEE,
+        .species = SPECIES_GILAN,
+        .pokeball = ITEM_SHADOW_BALL
     },
 };
 

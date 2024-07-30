@@ -72,3 +72,10 @@ KailoTown_Text_NoLeader::
     .string "of the Elite Four...\p"
     .string "...And there's too many trees\n"
     .string "for Fire Pokémon Leader...$"
+
+KailoTown_Text_NoNurse::
+	.string "Hey, kid!\n"
+	.string "You're looking for a DOCTOR?\p"
+	.string "She went to the MOON VALLEY this\n"
+	.string "night and didn't came back yet.\l"
+	.string "You'll have to wait for her.$"

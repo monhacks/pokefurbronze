@@ -2810,4 +2810,47 @@ static const u16 sTutorLearnsets[] =
                        | TUTOR(MOVE_MIMIC)
                        | TUTOR(MOVE_DREAM_EATER)
                        | TUTOR(MOVE_SUBSTITUTE),
+
+	[SPECIES_VILL] = TUTOR(MOVE_BODY_SLAM)
+                      | TUTOR(MOVE_DOUBLE_EDGE)
+                      | TUTOR(MOVE_MIMIC)
+                      | TUTOR(MOVE_SUBSTITUTE),
+
+	[SPECIES_MARIE] = TUTOR(MOVE_BODY_SLAM)
+                    | TUTOR(MOVE_DOUBLE_EDGE)
+                    | TUTOR(MOVE_MIMIC)
+                    | TUTOR(MOVE_SUBSTITUTE),
+
+	[SPECIES_GILAN] = TUTOR(MOVE_BODY_SLAM)
+                    | TUTOR(MOVE_DOUBLE_EDGE)
+                    | TUTOR(MOVE_MIMIC)
+                    | TUTOR(MOVE_SUBSTITUTE),
+
+	[SPECIES_GILANG] = TUTOR(MOVE_BODY_SLAM)
+                     | TUTOR(MOVE_DOUBLE_EDGE)
+                     | TUTOR(MOVE_MIMIC)
+                     | TUTOR(MOVE_SUBSTITUTE),
+
+	[SPECIES_EVEREST] = TUTOR(MOVE_BODY_SLAM)
+                      | TUTOR(MOVE_DOUBLE_EDGE)
+                      | TUTOR(MOVE_MIMIC)
+                      | TUTOR(MOVE_SUBSTITUTE),
+    
+    [SPECIES_EVERESTL] = TUTOR(MOVE_BODY_SLAM)
+                       | TUTOR(MOVE_DOUBLE_EDGE)
+                       | TUTOR(MOVE_MIMIC)
+                       | TUTOR(MOVE_SUBSTITUTE)
+                       | TUTOR(MOVE_SWORDS_DANCE),
+
+    [SPECIES_LEAFEON] = TUTOR(MOVE_BODY_SLAM)
+                      | TUTOR(MOVE_DOUBLE_EDGE)
+                      | TUTOR(MOVE_MIMIC)
+                      | TUTOR(MOVE_SUBSTITUTE)
+                      | TUTOR(MOVE_SWORDS_DANCE),
+
+	[SPECIES_GLACEON] = TUTOR(MOVE_BODY_SLAM)
+                      | TUTOR(MOVE_DOUBLE_EDGE)
+                      | TUTOR(MOVE_MIMIC)
+                      | TUTOR(MOVE_SUBSTITUTE),
+
 };

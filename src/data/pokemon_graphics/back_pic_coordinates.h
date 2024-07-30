@@ -2062,8 +2062,48 @@ const struct MonCoords gMonBackPicCoords[] =
     },
     [SPECIES_VILL] =
     {
-        .size = MON_COORDS_SIZE(64, 64),
+        .size = MON_COORDS_SIZE(56, 64),
+        .y_offset = 6,
+    },
+    [SPECIES_MARIE] =
+    {
+        .size = MON_COORDS_SIZE(48, 48),
+        .y_offset = 10,
+    },
+    [SPECIES_MARIEF] =
+    {
+        .size = MON_COORDS_SIZE(48, 56),
+        .y_offset = 5,
+    },
+    [SPECIES_GILAN] =
+    {
+        .size = MON_COORDS_SIZE(48, 48),
+        .y_offset = 10,
+    },
+    [SPECIES_GILANG] =
+    {
+        .size = MON_COORDS_SIZE(56, 64),
+        .y_offset = 6,
+    },
+    [SPECIES_EVEREST] =
+    {
+        .size = MON_COORDS_SIZE(48, 48),
+        .y_offset = 10,
+    },
+    [SPECIES_EVERESTL] =
+    {
+        .size = MON_COORDS_SIZE(48, 64),
         .y_offset = 0,
+    },
+    [SPECIES_LEAFEON] =
+    {
+        .size = MON_COORDS_SIZE(48, 64),
+        .y_offset = 0,
+    },
+    [SPECIES_GLACEON] =
+    {
+        .size = MON_COORDS_SIZE(56, 64),
+        .y_offset = 6,
     },
     [SPECIES_EGG] =
     {

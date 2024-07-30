@@ -310,7 +310,8 @@
     "SevenIsland_SevaultCanyon",
     "SevenIsland_TanobyRuins",
     "KailoTown",
-    "KailoTownFake"
+    "KailoTownFake",
+    "DyersTunnel"
   ],
   "gMapGroup_IndoorKailo": [
     "KailoTown_PlayersHouse_2F",

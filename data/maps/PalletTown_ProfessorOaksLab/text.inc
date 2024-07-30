@@ -369,4 +369,3 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
     .string "I think I'll try looking around\n"
     .string "ONE ISLAND first…\p"
     .string "Anyways, I'm outta here!$"
-

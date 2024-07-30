@@ -155,8 +155,11 @@
 #define OBJ_EVENT_GFX_SS_ANNE 151
 #define OBJ_EVENT_GFX_EEVEE 152
 #define OBJ_EVENT_GFX_GLACEON 153
-
-#define NUM_OBJ_EVENT_GFX     154
+#define OBJ_EVENT_GFX_BLACKBIRD 154
+#define OBJ_EVENT_GFX_BLACKBIRD_LYING_DOWN 155
+#define OBJ_EVENT_GFX_RED2 156
+#define OBJ_EVENT_GFX_MART_TRUCK 157
+#define NUM_OBJ_EVENT_GFX     158
 
 // These are dynamic object gfx ids.
 // They correspond with the values of the VAR_OBJ_GFX_ID_X vars.

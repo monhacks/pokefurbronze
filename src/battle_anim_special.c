@@ -29,6 +29,7 @@
 #define TAG_PARTICLES_TIMERBALL   55029
 #define TAG_PARTICLES_LUXURYBALL  55030
 #define TAG_PARTICLES_PREMIERBALL 55031
+#define TAG_PARTICLES_SHADOWBALL  55032
 
 u32 gMonShrinkDuration;
 u16 gMonShrinkDelta;
@@ -128,6 +129,7 @@ const struct CompressedSpriteSheet gBallParticleSpritesheets[] =
     [BALL_TIMER]   = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_TIMERBALL},
     [BALL_LUXURY]  = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_LUXURYBALL},
     [BALL_PREMIER] = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_PREMIERBALL},
+    [BALL_SHADOW]  = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_SHADOWBALL},
 };
 
 const struct CompressedSpritePalette gBallParticlePalettes[] =
@@ -144,6 +146,7 @@ const struct CompressedSpritePalette gBallParticlePalettes[] =
     [BALL_TIMER]   = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_TIMERBALL},
     [BALL_LUXURY]  = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_LUXURYBALL},
     [BALL_PREMIER] = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_PREMIERBALL},
+    [BALL_SHADOW]  = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_SHADOWBALL},
 };
 
 static const union AnimCmd sAnim_RegularBall[] =
@@ -212,6 +215,7 @@ static const u8 sBallParticleAnimNums[] =
     [BALL_TIMER]   = 5,
     [BALL_LUXURY]  = 4,
     [BALL_PREMIER] = 4,
+    [BALL_SHADOW]  = 0,
 };
 
 static const TaskFunc sBallParticleAnimationFuncs[] =
@@ -228,6 +232,7 @@ static const TaskFunc sBallParticleAnimationFuncs[] =
     [BALL_TIMER]   = TimerBallOpenParticleAnimation,
     [BALL_LUXURY]  = GreatBallOpenParticleAnimation,
     [BALL_PREMIER] = PremierBallOpenParticleAnimation,
+    [BALL_SHADOW]  = TimerBallOpenParticleAnimation,
 };
 
 static const struct SpriteTemplate sBallParticlesSpriteTemplates[] =
@@ -340,6 +345,15 @@ static const struct SpriteTemplate sBallParticlesSpriteTemplates[] =
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
+    [BALL_SHADOW] = {
+        .tileTag = TAG_PARTICLES_POKEBALL,
+        .paletteTag = TAG_PARTICLES_POKEBALL,
+        .oam = &gOamData_AffineOff_ObjNormal_8x8,
+        .anims = sAnims_BallParticles,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
 };
 
 static const u16 sBallOpenFadeColors[] =
@@ -356,6 +370,7 @@ static const u16 sBallOpenFadeColors[] =
     [BALL_TIMER]   = RGB(29, 30, 30),
     [BALL_LUXURY]  = RGB(31, 17, 10),
     [BALL_PREMIER] = RGB(31, 9, 10),
+    [BALL_SHADOW]   = RGB(29, 30, 30),
 
     // Unused
     RGB_BLACK,
@@ -725,6 +740,8 @@ u8 ItemIdToBallId(u16 ballItem)
         return BALL_LUXURY;
     case ITEM_PREMIER_BALL:
         return BALL_PREMIER;
+    case ITEM_SHADOW_BALL:
+        return BALL_SHADOW;
     case ITEM_POKE_BALL:
     default:
         return BALL_POKE;

@@ -413,5 +413,12 @@ const u8 *const gMonFootprintTable[] =
     [SPECIES_DEOXYS] = gMonFootprint_Deoxys,
     [SPECIES_CHIMECHO] = gMonFootprint_Chimecho,
     [SPECIES_VILL] = gMonFootprint_Vill,
+    [SPECIES_MARIE] = gMonFootprint_Eevee,
+    [SPECIES_GILAN] = gMonFootprint_Eevee,
+    [SPECIES_GILANG] = gMonFootprint_Glaceon,
+    [SPECIES_EVEREST] = gMonFootprint_Eevee,
+    [SPECIES_EVERESTL] = gMonFootprint_Leafeon,
+    [SPECIES_LEAFEON] = gMonFootprint_Leafeon,
+    [SPECIES_GLACEON] = gMonFootprint_Glaceon,
     [SPECIES_EGG] = gMonFootprint_Bulbasaur,
 };

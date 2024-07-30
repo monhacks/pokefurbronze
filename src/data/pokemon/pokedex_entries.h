@@ -5037,6 +5037,107 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 7.89,
         .weight = 249,
         .description = gVillPokedexText,
+        .unusedDescription = gVillPokedexTextUnused,
+        .pokemonScale = 366,
+        .pokemonOffset = 10,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_MARIE] =
+    {
+        .categoryName = _("EVOLUTION"),
+        .height = 3,
+        .weight = 65,
+        .description = gMariePokedexText,
+        .unusedDescription = gMariePokedexTextUnused,
+        .pokemonScale = 476,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
+	[NATIONAL_DEX_MARIEF] =
+    {
+        .categoryName = _("FLAME"),
+        .height = 9,
+        .weight = 250,
+        .description = gMarieFPokedexText,
+        .unusedDescription = gMarieFPokedexTextUnused,
+        .pokemonScale = 302,
+        .pokemonOffset = 11,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+
+	[NATIONAL_DEX_GILAN] =
+    {
+        .categoryName = _("EVOLUTION"),
+        .height = 3,
+        .weight = 65,
+        .description = gGilanPokedexText,
+        .unusedDescription = gGilanPokedexTextUnused,
+        .pokemonScale = 476,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+    
+    [NATIONAL_DEX_GILANG] =
+    {
+        .categoryName = _("FRESH SNOW"),
+        .height = 8,
+        .weight = 259,
+        .description = gGilanGPokedexText,
+        .unusedDescription = gGilanGPokedexTextUnused,
+        .pokemonScale = 366,
+        .pokemonOffset = 10,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+    },
+    [NATIONAL_DEX_EVEREST] =
+    {
+        .categoryName = _("EVOLUTION"),
+        .height = 3,
+        .weight = 65,
+        .description = gEverestPokedexText,
+        .unusedDescription = gEverestPokedexTextUnused,
+        .pokemonScale = 476,
+        .pokemonOffset = 17,
+        .trainerScale = 256,
+        .trainerOffset = -2,
+    },
+    [NATIONAL_DEX_EVERESTL] =
+    {
+        .categoryName = _("VERDANT"),
+        .height = 10,
+        .weight = 255,
+        .description = gEverestLPokedexText,
+        .unusedDescription = gEverestLPokedexTextUnused,
+        .pokemonScale = 305,
+        .pokemonOffset = 8,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+    },
+    [NATIONAL_DEX_LEAFEON] =
+    {
+        .categoryName = _("VERDANT"),
+        .height = 10,
+        .weight = 255,
+        .description = gLeafeonPokedexText,
+        .unusedDescription = gLeafeonPokedexTextUnused,
+        .pokemonScale = 305,
+        .pokemonOffset = 8,
+        .trainerScale = 257,
+        .trainerOffset = 0,
+    },
+    [NATIONAL_DEX_GLACEON] =
+    {
+        .categoryName = _("FRESH SNOW"),
+        .height = 8,
+        .weight = 259,
+        .description = gGlaceonPokedexText,
+        .unusedDescription = gGlaceonPokedexTextUnused,
         .pokemonScale = 366,
         .pokemonOffset = 10,
         .trainerScale = 257,

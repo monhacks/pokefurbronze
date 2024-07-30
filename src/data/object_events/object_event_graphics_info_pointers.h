@@ -153,6 +153,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAnne;
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Eevee;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Glaceon;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BlackbirdLyingDown;
 
 
 const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM_OBJ_EVENT_GFX] = {
@@ -310,4 +311,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_SS_ANNE]                  = &gObjectEventGraphicsInfo_SSAnne,
     [OBJ_EVENT_GFX_EEVEE]                    = &gObjectEventGraphicsInfo_Eevee,
     [OBJ_EVENT_GFX_GLACEON]                  = &gObjectEventGraphicsInfo_Glaceon,
+    [OBJ_EVENT_GFX_BLACKBIRD]                = &gObjectEventGraphicsInfo_Blackbird,
+    [OBJ_EVENT_GFX_BLACKBIRD_LYING_DOWN]     = &gObjectEventGraphicsInfo_BlackbirdLyingDown,
+    [OBJ_EVENT_GFX_RED2]                     = &gObjectEventGraphicsInfo_Red2,
+    [OBJ_EVENT_GFX_MART_TRUCK]               = &gObjectEventGraphicsInfo_MartTruck,
 };

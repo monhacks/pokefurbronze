@@ -514,6 +514,9 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_HOENN(DEOXYS),
     SPECIES_TO_HOENN(CHIMECHO),
     SPECIES_TO_HOENN(VILL),
+    SPECIES_TO_HOENN(MARIE),
+    SPECIES_TO_HOENN(GILAN),
+    SPECIES_TO_HOENN(EVEREST),
 };
 
  // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -931,6 +934,9 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     SPECIES_TO_NATIONAL(DEOXYS),
     SPECIES_TO_NATIONAL(CHIMECHO),
     SPECIES_TO_NATIONAL(VILL),
+    SPECIES_TO_NATIONAL(MARIE),
+    SPECIES_TO_NATIONAL(GILAN),
+    SPECIES_TO_NATIONAL(EVEREST),
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1323,6 +1329,14 @@ static const u16 sHoennToNationalOrder[NUM_SPECIES - 1] =
     HOENN_TO_NATIONAL(HO_OH),
     HOENN_TO_NATIONAL(CELEBI),
     HOENN_TO_NATIONAL(VILL),
+    HOENN_TO_NATIONAL(MARIE),
+    HOENN_TO_NATIONAL(MARIEF),
+    HOENN_TO_NATIONAL(GILAN),
+    HOENN_TO_NATIONAL(GILANG),
+    HOENN_TO_NATIONAL(EVEREST),
+    HOENN_TO_NATIONAL(EVERESTL),
+    HOENN_TO_NATIONAL(LEAFEON),
+    HOENN_TO_NATIONAL(GLACEON),
     HOENN_TO_NATIONAL(OLD_UNOWN_B),
     HOENN_TO_NATIONAL(OLD_UNOWN_C),
     HOENN_TO_NATIONAL(OLD_UNOWN_D),
@@ -5336,10 +5350,42 @@ void DrawSpindaSpots(u16 species, u32 personality, u8 *dest, bool8 isFrontPic)
 void EvolutionRenameMon(struct Pokemon *mon, u16 oldSpecies, u16 newSpecies)
 {
     u8 language;
+    u8 name[POKEMON_NAME_LENGTH];
+    
     GetMonData(mon, MON_DATA_NICKNAME, gStringVar1);
     language = GetMonData(mon, MON_DATA_LANGUAGE, &language);
     if (language == GAME_LANGUAGE && !StringCompare(gSpeciesNames[oldSpecies], gStringVar1))
-        SetMonData(mon, MON_DATA_NICKNAME, gSpeciesNames[newSpecies]);
+        {
+			if (StringCompare(gSpeciesNames[oldSpecies], gStringVar1))
+				{
+					SetMonData(mon, MON_DATA_NICKNAME, gSpeciesNames[newSpecies]);
+				}
+				else
+				{
+					if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_MARIEF)
+					{
+						static const u8 sText_PlotMon[] = _("MARIE");
+						StringCopy(name, sText_PlotMon);
+						SetMonData(mon, MON_DATA_NICKNAME, &name);
+					}
+					else if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_GILANG)
+					{
+						static const u8 sText_PlotMon[] = _("GILAN");
+						StringCopy(name, sText_PlotMon);
+						SetMonData(mon, MON_DATA_NICKNAME, &name);
+					}
+					else if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_EVERESTL)
+					{
+						static const u8 sText_PlotMon[] = _("EVEREST");
+						StringCopy(name, sText_PlotMon);
+						SetMonData(mon, MON_DATA_NICKNAME, &name);
+					}
+					else
+					{
+						SetMonData(mon, MON_DATA_NICKNAME, gSpeciesNames[newSpecies]);
+					}
+				}
+		}		
 }
 
 // The below two functions determine which side of a multi battle the trainer battles on

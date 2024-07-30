@@ -364,6 +364,7 @@ gSpecials::
 	def_special ForcePlayerToStartSurfing
 	def_special GetStarterSpecies
 	def_special SetSeenMon
+	def_special SetCaughtMon
 	def_special VsSeekerResetObjectMovementAfterChargeComplete
 	def_special ShouldShowBoxWasFullMessage
 	def_special ChangeBoxPokemonNickname

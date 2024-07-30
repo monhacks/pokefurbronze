@@ -388,7 +388,10 @@ gCryTable::
 	cry Cry_Jirachi
 	cry Cry_Deoxys
 	cry Cry_Chimecho
+	cry Cry_Eevee2
+	cry Cry_Flareon2
     cry Cry_Glaceon
+    cry Cry_Leafeon
 
 	.align 2
 gCryTable_Reverse::
@@ -780,4 +783,7 @@ gCryTable_Reverse::
 	cry_reverse Cry_Jirachi
 	cry_reverse Cry_Deoxys
 	cry_reverse Cry_Chimecho
+	cry_reverse Cry_Eevee2
+	cry_reverse Cry_Flareon2
     cry_reverse Cry_Glaceon
+    cry_reverse Cry_Leafeon

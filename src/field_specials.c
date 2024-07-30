@@ -1537,6 +1537,11 @@ void SetSeenMon(void)
     GetSetPokedexFlag(SpeciesToNationalPokedexNum(gSpecialVar_0x8004), 2);
 }
 
+void SetCaughtMon(void)
+{
+    GetSetPokedexFlag(SpeciesToNationalPokedexNum(gSpecialVar_0x8004), 1);
+}
+
 void ResetContextNpcTextColor(void)
 {
     gSelectedObjectEvent = 0;

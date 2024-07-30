@@ -2711,9 +2711,73 @@ const u8 gDeoxysPokedexText[] = _(
 const u8 gDeoxysPokedexTextUnused[] = _("");
 
 const u8 gVillPokedexText[] = _(
-    "PROF. BLACKBIRD said that\n"
-    "this Ice type POKéMON evolved\n"
-    "from EEVEE in Sinnoh.\n"
-    "Strange.");
+    "This is one of the PROF.\n"
+    "BLACKBIRD's POKéMON.\n"
+    "He said that it evolved from EEVEE\n"
+    "while exploring Sinnoh's cold areas.");
 
 const u8 gVillPokedexTextUnused[] = _("");
+
+const u8 gMariePokedexText[] = _(
+    "This is one of the PROF.\n"
+    "BLACKBIRD's POKéMON.\n"
+    "She's quite hardy and when she\n"
+    "bite it's somehow more painful.");
+
+const u8 gMariePokedexTextUnused[] = _("");
+
+const u8 gMarieFPokedexText[] = _(
+    "The EEVEE that PROF. BLACKBIRD gave\n"
+    "to me evolved into a FLAREON.\n"
+    "It's strange that it evolved without\n"
+    "the FIRE STONE, but that's great!");
+
+const u8 gMarieFPokedexTextUnused[] = _("");
+
+const u8 gGilanPokedexText[] = _(
+    "This is one of the PROF.\n"
+    "BLACKBIRD's POKéMON.\n"
+    "That brown crazy furball never\n"
+    "knows when to slow down.");
+
+const u8 gGilanPokedexTextUnused[] = _("");
+
+const u8 gGilanGPokedexText[] = _(
+    "The EEVEE that PROF. BLACKBIRD gave\n"
+    "to me evolved into a... GLACEON?.\n"
+    "It looks like that PROF's blue\n"
+    "POKéMON, and it's an Ice type now.");
+
+const u8 gGilanGPokedexTextUnused[] = _("");
+
+const u8 gEverestPokedexText[] = _(
+    "This is one of the PROF.\n"
+    "BLACKBIRD's POKéMON.\n"
+    "He's quite sleepy but he's very\n"
+    "tough when he have to do something.");
+
+const u8 gEverestPokedexTextUnused[] = _("");
+
+const u8 gEverestLPokedexText[] = _(
+    "The EEVEE that PROF. BLACKBIRD gave\n"
+    "to me evolved into L-LEA-LEAFEON?.\n"
+    "It's a Grass type POKéMON that uses\n"
+    "photosynthesis to regenerate itself.");
+
+const u8 gEverestLPokedexTextUnused[] = _("");
+
+const u8 gLeafeonPokedexText[] = _(
+    "Its cellular composition is closer to\n"
+    "that of a plant than an animal. It uses\n"
+    "photosynthesis to produce its energy\n"
+    "supply without eating food.");
+
+const u8 gLeafeonPokedexTextUnused[] = _("");
+
+const u8 gGlaceonPokedexText[] = _(
+    "It can control its body temperature\n"
+    "at will. This enables it to freeze the\n"
+    "moisture in the atmosphere, creating\n"
+    "flurries of diamond dust.");
+
+const u8 gGlaceonPokedexTextUnused[] = _("");

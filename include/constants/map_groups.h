@@ -271,6 +271,7 @@
 #define MAP_SEVEN_ISLAND_TANOBY_RUINS            (65 | (3 << 8))
 #define MAP_KAILO_TOWN                           (66 | (3 << 8))
 #define MAP_KAILO_TOWN_FAKE                      (67 | (3 << 8))
+#define MAP_DYERS_TUNNEL                         (68 | (3 << 8))
 
 // gMapGroup_IndoorKailo
 #define MAP_KAILO_TOWN_PLAYERS_HOUSE_2F        (0 | (4 << 8))

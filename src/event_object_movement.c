@@ -452,6 +452,10 @@ static const u8 gInitialMovementTypeFacingDirections[MOVEMENT_TYPES_COUNT] = {
 #define OBJ_EVENT_PAL_TAG_RS_SUBMARINE_SHADOW         0x111B
 #define OBJ_EVENT_PAL_TAG_EEVEE                       0x111C
 #define OBJ_EVENT_PAL_TAG_GLACEON                     0x111D
+#define OBJ_EVENT_PAL_TAG_BLACKBIRD                   0x111E
+#define OBJ_EVENT_PAL_TAG_BLACKBIRD_LYING_DOWN        0x111F
+#define OBJ_EVENT_PAL_TAG_DAN                         0x1120
+#define OBJ_EVENT_PAL_TAG_TRUCK                       0x1121
 #define OBJ_EVENT_PAL_TAG_NONE                        0x11FF
 
 #include "data/field_effects/field_effect_object_template_pointers.h"
@@ -483,6 +487,10 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Seagallop,               OBJ_EVENT_PAL_TAG_SEAGALLOP},
     {gObjectEventPal_Eevee,                   OBJ_EVENT_PAL_TAG_EEVEE},
     {gObjectEventPal_Glaceon,                 OBJ_EVENT_PAL_TAG_GLACEON},
+    {gObjectEventPal_BlackbirdLyingDown,      OBJ_EVENT_PAL_TAG_BLACKBIRD_LYING_DOWN},
+    {gObjectEventPal_Blackbird,               OBJ_EVENT_PAL_TAG_BLACKBIRD},
+    {gObjectEventPal_Dan,                     OBJ_EVENT_PAL_TAG_DAN},
+    {gObjectEventPal_Truck,                   OBJ_EVENT_PAL_TAG_TRUCK},
     {},
 };
 

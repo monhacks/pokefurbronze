@@ -1856,6 +1856,18 @@ Cry_Chimecho::
 	.incbin "sound/direct_sound_samples/cries/chimecho.bin"
 
 	.align 2
+Cry_Eevee2::
+	.incbin "sound/direct_sound_samples/cries/eevee.bin"
+	
+	.align 2
+Cry_Flareon2::
+	.incbin "sound/direct_sound_samples/cries/flareon.bin"
+	
+	.align 2
+Cry_Leafeon::
+	.incbin "sound/direct_sound_samples/cries/leafeon.bin"
+	
+	.align 2
 Cry_Glaceon::
 	.incbin "sound/direct_sound_samples/cries/glaceon.bin"
 

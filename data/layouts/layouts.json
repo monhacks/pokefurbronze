@@ -4488,6 +4488,18 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/KailoTown_PokemonCenter_1F/border.bin",
       "blockdata_filepath": "data/layouts/KailoTown_PokemonCenter_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_DYERS_TUNNEL",
+      "name": "DyersTunnel_Layout",
+      "width": 50,
+      "height": 11,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_KailoTown",
+      "border_filepath": "data/layouts/DyersTunnel/border.bin",
+      "blockdata_filepath": "data/layouts/DyersTunnel/map.bin"
     }
   ]
 }

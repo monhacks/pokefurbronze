@@ -14,6 +14,7 @@ static const u32 *const sItemIconTable[ITEMS_COUNT + 1][2] =
     [ITEM_TIMER_BALL]     = {gItemIcon_TimerBall, gItemIconPalette_RepeatBall},
     [ITEM_LUXURY_BALL]    = {gItemIcon_LuxuryBall, gItemIconPalette_LuxuryBall},
     [ITEM_PREMIER_BALL]   = {gItemIcon_PremierBall, gItemIconPalette_LuxuryBall},
+    [ITEM_SHADOW_BALL]    = {gItemIcon_ShadowBall, gItemIconPalette_ShadowBall},
     // Medicine
     [ITEM_POTION]         = {gItemIcon_Potion, gItemIconPalette_Potion},
     [ITEM_ANTIDOTE]       = {gItemIcon_Antidote, gItemIconPalette_Antidote},

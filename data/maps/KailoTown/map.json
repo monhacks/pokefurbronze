@@ -118,8 +118,8 @@
       "x": 29,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE24",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_DYERS_TUNNEL",
+      "dest_warp_id": "1"
     },
     {
       "x": 5,
@@ -138,6 +138,42 @@
       "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
       "var_value": "1",
       "script": "KailoTown_EventScript_JennyStop"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var_value": "1",
+      "script": "KailoTown_EventScript_NoNurse"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var_value": "4",
+      "script": "KailoTown_EventScript_NoNurse"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var_value": "2",
+      "script": "KailoTown_EventScript_NoNurse"
+    },
+    {
+      "type": "trigger",
+      "x": 21,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB",
+      "var_value": "3",
+      "script": "KailoTown_EventScript_NoNurse"
     }
   ],
   "bg_events": [

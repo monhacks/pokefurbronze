@@ -51,11 +51,11 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST",
+      "graphics_id": "OBJ_EVENT_GFX_BLACKBIRD",
       "x": 3,
       "y": 9,
       "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -121,7 +121,7 @@
     },
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN",
+      "graphics_id": "OBJ_EVENT_GFX_BLACKBIRD_LYING_DOWN",
       "x": 3,
       "y": 9,
       "elevation": 0,
@@ -187,6 +187,15 @@
     }
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 9,
+      "y": 8,
+      "elevation": 0,
+      "item": "ITEM_RARE_CANDY",
+      "flag": "FLAG_TEMP_1",
+      "quantity": 20,
+      "underfoot": false
+    }
   ]
 }

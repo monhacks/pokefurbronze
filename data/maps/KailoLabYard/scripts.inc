@@ -31,7 +31,6 @@ KailoLabYard_StartBlackbirdMeeting::
   setobjectmovementtype LOCALID_GILAN1, MOVEMENT_TYPE_FACE_RIGHT
   applymovement LOCALID_GILAN1, KailoLabYard_Movement_StartBlackbirdMeeting_GilanStart
   waitmovement 0
-  playse SE_PIN
   playmoncry SPECIES_EEVEE, CRY_MODE_DOUBLES
   delay 85
   delay 50
@@ -61,18 +60,16 @@ KailoLabYard_StartBlackbirdMeeting::
   delay 85
   delay 85
   applymovement LOCALID_VILL, KailoLabYard_Movement_StartBlackbirdMeeting_Vill
-  waitmovement 0
-  playse SE_PIN
-  delay 10
   playmoncry SPECIES_VILL, CRY_MODE_NORMAL
+  waitmovement 0
   delay 85
   applymovement LOCALID_GILAN, KailoLabYard_Movement_StartBlackbirdMeeting_GilanExclamation
   waitmovement 0
   playse SE_PIN
-  applymovement LOCALID_MARIE, KailoLabYard_Movement_StartBlackbirdMeeting_Vill
+  applymovement LOCALID_MARIE, KailoLabYard_Movement_StartBlackbirdMeeting_Marie_Everest
   waitmovement 0
   playse SE_PIN
-  applymovement LOCALID_EVEREST, KailoLabYard_Movement_StartBlackbirdMeeting_Vill
+  applymovement LOCALID_EVEREST, KailoLabYard_Movement_StartBlackbirdMeeting_Marie_Everest
   waitmovement 0
   playse SE_PIN
   delay 85
@@ -93,7 +90,6 @@ KailoLabYard_StartBlackbirdMeeting::
   delay 85
   closemessage
   applymovement OBJ_EVENT_ID_PLAYER, KailoLabYard_Movement_StartBlackbirdMeeting_Vill
-  playse SE_PIN
   applymovement LOCALID_YORI, KailoLabYard_Movement_StartBlackbirdMeeting_YoriStart
   waitmovement 0
   msgbox KailoLabYard_Text_StartBlackbirdMeeting_YoriLate
@@ -187,7 +183,7 @@ KailoLabYard_StartBlackbirdMeeting::
   delay 50
   msgbox KailoLabYard_Text_StartBlackbirdMeeting_YoriCHoose
   closemessage
-  setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
+  setvar RIVAL_STARTER_SPECIES, SPECIES_GILAN
   textcolor NPC_TEXT_COLOR_NEUTRAL
   bufferspeciesname STR_VAR_1, RIVAL_STARTER_SPECIES
   message PalletTown_ProfessorOaksLab_Text_RivalReceivedMonFromOak
@@ -227,22 +223,22 @@ KailoLabYard_Movement_StartBlackbirdMeeting_GilanStart::
   player_run_up
   player_run_right
   walk_in_place_faster_right
-  emote_exclamation_mark
   step_end
 
 KailoLabYard_Movement_StartBlackbirdMeeting_GilanJumps::
-  player_run_up
-  player_run_down
-  player_run_down
-  player_run_up
-  player_run_up
-  player_run_down
+  jump_up
+  jump_down
+  jump_down
+  jump_up
+  jump_up
+  jump_down
+  walk_in_place_faster_right
+  delay_16
+  delay_16
   player_run_left
   player_run_down
   player_run_left
   player_run_down
-  player_run_left
-  player_run_left
   player_run_left
   player_run_left
   step_end
@@ -270,6 +266,10 @@ KailoLabYard_Movement_StartBlackbirdMeeting_GilanSmile::
   step_end
 
 KailoLabYard_Movement_StartBlackbirdMeeting_Vill::
+  walk_in_place_faster_right
+  step_end
+
+KailoLabYard_Movement_StartBlackbirdMeeting_Marie_Everest::
   emote_exclamation_mark
   walk_in_place_faster_right
   step_end

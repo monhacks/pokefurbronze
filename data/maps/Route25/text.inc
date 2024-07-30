@@ -105,7 +105,12 @@ Route25_Text_WaynePostBattle::
 
 Route25_Text_SeaCottageSign::
     .string "SEA COTTAGE\n"
-    .string "BILL lives here!$"
+    .string "For sale!$"
+
+Route25_Text_SeaCottageSign2::
+	.string "A beauty house\n"
+	.string "In a beautiful place...\p"
+	.string "SEA COTTAGE is for sale!$"
 
 Route25_Text_MistyHighHopesAboutThisPlace::
     .string "This cape is a famous date spot.\p"

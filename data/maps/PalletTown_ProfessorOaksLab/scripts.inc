@@ -938,8 +938,8 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
 	lockall
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
-	setvar PLAYER_STARTER_SPECIES, SPECIES_EEVEE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
+	setvar PLAYER_STARTER_SPECIES, SPECIES_MARIE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_GILAN
 	setvar RIVAL_STARTER_ID, LOCALID_CHARMANDER_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
@@ -1007,7 +1007,7 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseStarter::
 	waitmessage
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	waitfanfare
-	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	msgbox Text_GiveNicknameToPlotMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, EventScript_GiveNicknameToStarter
 	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_RivalPicksStarter
 	end
@@ -1024,7 +1024,7 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseMarie::
 	waitmessage
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	waitfanfare
-	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	msgbox Text_GiveNicknameToPlotMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, EventScript_GiveNicknameToStarter
 	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_RivalPicksStarter
 	end
@@ -1041,7 +1041,7 @@ PalletTown_ProfessorOaksLab_EventScript_ChoseGilan::
 	waitmessage
 	playfanfare MUS_OBTAIN_KEY_ITEM
 	waitfanfare
-	msgbox Text_GiveNicknameToThisMon, MSGBOX_YESNO
+	msgbox Text_GiveNicknameToPlotMon, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, EventScript_GiveNicknameToStarter
 	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_RivalPicksStarter
 	end
@@ -1121,8 +1121,8 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
 	lockall
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
-	setvar PLAYER_STARTER_SPECIES, SPECIES_EEVEE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
+	setvar PLAYER_STARTER_SPECIES, SPECIES_GILAN
+	setvar RIVAL_STARTER_SPECIES, SPECIES_MARIE
 	setvar RIVAL_STARTER_ID, LOCALID_BULBASAUR_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
@@ -1134,8 +1134,8 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
 	lockall
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
-	setvar PLAYER_STARTER_SPECIES, SPECIES_EEVEE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_EEVEE
+	setvar PLAYER_STARTER_SPECIES, SPECIES_EVEREST
+	setvar RIVAL_STARTER_SPECIES, SPECIES_GILAN
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
@@ -1146,8 +1146,21 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
 PalletTown_ProfessorOaksLab_EventScript_LastPokeBall::
 	playmoncry SPECIES_EEVEE, CRY_MODE_NORMAL
 	msgbox PalletTown_ProfessorOaksLab_Text_OaksLastMon
+	call_if_eq PLAYER_STARTER_NUM, 2, KailoLabYard_AfterTutorial_RemainingMarie
+    call_if_eq PLAYER_STARTER_NUM, 1, KailoLabYard_AfterTutorial_RemainingEverest
+    call_if_eq PLAYER_STARTER_NUM, 0, KailoLabYard_AfterTutorial_RemainingEverest
 	release
 	end
+
+KailoLabYard_AfterTutorial_RemainingMarie::
+	applymovement LOCALID_MARIE, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
+	waitmovement 0
+	return
+
+KailoLabYard_AfterTutorial_RemainingEverest::
+	applymovement LOCALID_MARIE, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
+	waitmovement 0
+	return
 
 PalletTown_ProfessorOaksLab_EventScript_Aide1::
 	lock

@@ -930,6 +930,10 @@ Text_GiveNicknameToThisMon::
 	.string "Do you want to give a nickname to\n"
 	.string "this {STR_VAR_1}?$"
 
+Text_GiveNicknameToPlotMon::
+	.string "Do you want to give a nickname to\n"
+	.string "{STR_VAR_1}?$"
+
 	.include "data/text/itemfinder.inc"
 	.include "data/text/route23.inc"
 	.include "data/text/aide.inc"
@@ -1385,3 +1389,6 @@ Text_TestMsg::
 
 	.include "data/maps/KailoTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/KailoTown_PokemonCenter_1F/text.inc"
+
+	.include "data/maps/DyersTunnel/scripts.inc"
+	.include "data/maps/DyersTunnel/text.inc"

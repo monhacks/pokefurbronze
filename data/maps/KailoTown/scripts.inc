@@ -154,43 +154,35 @@ KailoTown_Movement_JennyStop_JennyBlock::
   step_end
 
 KailoTown_EventScript_LabSign::
-  msgbox KailoTown_Text_LabSign
-  closemessage
+  msgbox KailoTown_Text_LabSign, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_DC::
-  msgbox KailoTown_Text_DC
-  closemessage
+  msgbox KailoTown_Text_DC, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_KailoSign::
-  msgbox KailoTown_Text_KailoSign
-  closemessage
+  msgbox KailoTown_Text_KailoSign, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_Mailbox::
-  msgbox KailoTown_Text_Mailbox
-  closemessage
+  msgbox KailoTown_Text_Mailbox, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_HelenMailbox::
-  msgbox KailoTown_Text_HelenMailbox
-  closemessage
+  msgbox KailoTown_Text_HelenMailbox, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_DoorClosed::
-  msgbox KailoTown_Text_DoorClosed
-  closemessage
+  msgbox KailoTown_Text_DoorClosed, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_UnderConstruction::
-  msgbox KailoTown_Text_UnderConstruction
-  closemessage
+  msgbox KailoTown_Text_UnderConstruction, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_Gym::
-  msgbox KailoTown_Text_Gym
-  closemessage
+  msgbox KailoTown_Text_Gym, MSGBOX_SIGN
   end
 
 KailoTown_EventScript_Unloader::
@@ -234,3 +226,21 @@ KailoTown_EventScript_Damien::
   closemessage
   release
   end
+
+KailoTown_EventScript_NoNurse::
+  lock
+  applymovement LOCALID_SELLER, KailoLabYard_Movement_StartBlackbirdMeeting_GilanLookVictor
+  waitmovement 0
+  applymovement OBJ_EVENT_ID_PLAYER, KailoLabYard_Movement_StartBlackbirdMeeting_VictorLookGilan
+  textcolor NPC_TEXT_COLOR_MALE
+  msgbox KailoTown_Text_NoNurse
+  closemessage
+  applymovement OBJ_EVENT_ID_PLAYER, KailoTown_Movement_NoNurseBack
+  applymovement LOCALID_SELLER, KailoLabYard_Movement_StartBlackbirdMeeting_MarieLookVictor
+  waitmovement 0
+  release
+  end
+
+KailoTown_Movement_NoNurseBack::
+  walk_down
+  step_end

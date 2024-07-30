@@ -412,4 +412,12 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_DEOXYS] = _("DEOXYS"),
     [SPECIES_CHIMECHO] = _("CHIMECHO"),
     [SPECIES_VILL] = _("VILL"),
+    [SPECIES_MARIE] = _("MARIE"),
+    [SPECIES_MARIEF] = _("FLAREON"),
+    [SPECIES_GILAN] = _("GILAN"),
+    [SPECIES_GILANG] = _("GLACEON"),
+    [SPECIES_EVEREST] = _("EVEREST"),
+    [SPECIES_EVERESTL] = _("LEAFEON"),
+    [SPECIES_LEAFEON] = _("LEAFEON"),
+    [SPECIES_GLACEON] = _("GLACEON"),
 };

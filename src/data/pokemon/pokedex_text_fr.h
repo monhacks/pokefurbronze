@@ -2720,9 +2720,73 @@ const u8 gDeoxysPokedexText[] = _(
 const u8 gDeoxysPokedexTextUnused[] = _("");
 
 const u8 gVillPokedexText[] = _(
-    "This is one of the PROF.\n"
-    "BLACKBIRD POKéMON.\n"
-    "He said that it evolved from EEVEE\n"
-    "while exploring Sinnoh cold areas.");
+    "PROF. BLACKBIRD said that\n"
+    "this Ice type POKéMON evolved\n"
+    "from EEVEE in Sinnoh.\n"
+    "Strange.");
 
 const u8 gVillPokedexTextUnused[] = _("");
+
+const u8 gMariePokedexText[] = _(
+    "It's a daughter of that PROF.\n"
+    "BLACKBIRD's blue POKéMON.\n"
+    "I saw the bite marks on PROF's\n"
+    "hand, it have to be strong...");
+
+const u8 gMariePokedexTextUnused[] = _("");
+
+const u8 gMarieFPokedexText[] = _(
+    "It evolved from Eevee that\n"
+    "PROF. BLACKBIRD gave to me.\n"
+    "Now it's my strong, fluffy\n"
+    "FLAREON!");
+
+const u8 gMarieFPokedexTextUnused[] = _("");
+
+const u8 gGilanPokedexText[] = _(
+    "It's a son of that PROF.\n"
+    "BLACKBIRD's blue POKéMON.\n"
+    "It's a bit crazy, but it's\n"
+    "funny to watch it like that..");
+
+const u8 gGilanPokedexTextUnused[] = _("");
+
+const u8 gGilanGPokedexText[] = _(
+    "It's now looking like that\n"
+    "PROF. BLACKBIRD's POKéMON.\n"
+    "And it's an Ice type now!\n"
+    "Cool!");
+
+const u8 gGilanGPokedexTextUnused[] = _("");
+
+const u8 gEverestPokedexText[] = _(
+    "It's a son of that PROF.\n"
+    "BLACKBIRD's blue POKéMON.\n"
+    "It sleeps much more than its\n"
+    "brother or sister.");
+
+const u8 gEverestPokedexTextUnused[] = _("");
+
+const u8 gEverestLPokedexText[] = _(
+    "It grew up into a...\n"
+    "Grass type?\n"
+    "It's sleeping even more, turning\n"
+    "its leafy ears to the sun");
+
+const u8 gEverestLPokedexTextUnused[] = _("");
+
+const u8 gLeafeonPokedexText[] = _(
+    "Its cellular composition is closer to\n"
+    "that of a plant than an animal. It uses\n"
+    "photosynthesis to produce its energy\n"
+    "supply without eating food.");
+
+const u8 gLeafeonPokedexTextUnused[] = _("");
+
+const u8 gGlaceonPokedexText[] = _(
+    "It can control its body temperature\n"
+    "at will. This enables it to freeze the\n"
+    "moisture in the atmosphere, creating\n"
+    "flurries of diamond dust.");
+
+const u8 gGlaceonPokedexTextUnused[] = _("");

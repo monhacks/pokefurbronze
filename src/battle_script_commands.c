@@ -9541,6 +9541,9 @@ static void Cmd_handleballthrow(void)
             case ITEM_PREMIER_BALL:
                 ballMultiplier = 10;
                 break;
+            case ITEM_SHADOW_BALL:
+                ballMultiplier = 100;
+                break;
             }
         }
         else

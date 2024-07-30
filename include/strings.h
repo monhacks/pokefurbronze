@@ -943,6 +943,7 @@ extern const u8 gText_PickSwitchCancel[];
 // evolution_scene
 extern const u8 gText_PkmnIsEvolving[];
 extern const u8 gText_CongratsPkmnEvolved[];
+extern const u8 gText_CongratsPlotMonEvolved[];
 extern const u8 gText_EllipsisQuestionMark[];
 extern const u8 gText_PkmnStoppedEvolving[];
 

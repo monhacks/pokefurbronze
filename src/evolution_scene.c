@@ -636,6 +636,8 @@ static void Task_EvolutionScene(u8 taskId)
     u32 var;
     struct Pokemon* mon = &gPlayerParty[gTasks[taskId].tPartyId];
 
+/*
+
     // Automatically cancel if the Pokemon would evolve into a species you have not
     // yet unlocked, such as Crobat.
     if (!IsNationalPokedexEnabled()
@@ -648,6 +650,8 @@ static void Task_EvolutionScene(u8 taskId)
         StopBgAnimation();
         return;
     }
+
+*/
 
     // check if B Button was held, so the evolution gets stopped
     if (gMain.heldKeys == B_BUTTON
@@ -772,16 +776,58 @@ static void Task_EvolutionScene(u8 taskId)
     case EVOSTATE_SET_MON_EVOLVED:
         if (IsCryFinished())
         {
-            StringExpandPlaceholders(gStringVar4, gText_CongratsPkmnEvolved);
-            BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
-            PlayBGM(MUS_EVOLVED);
-            gTasks[taskId].tState++;
-            SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
-            CalculateMonStats(mon);
-            EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
-            GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
-            GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
-            IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+			if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_MARIE)
+			{
+				StringExpandPlaceholders(gStringVar4, gText_CongratsPlotMonEvolved);
+				BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
+				PlayBGM(MUS_EVOLVED);
+				gTasks[taskId].tState++;
+				SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
+				CalculateMonStats(mon);
+				EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
+				IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+			}
+			else if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_GILAN)
+			{
+				StringExpandPlaceholders(gStringVar4, gText_CongratsPlotMonEvolved);
+				BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
+				PlayBGM(MUS_EVOLVED);
+				gTasks[taskId].tState++;
+				SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
+				CalculateMonStats(mon);
+				EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
+				IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+			}
+			else if (GetMonData(mon, MON_DATA_SPECIES, NULL) == SPECIES_EVEREST)
+			{
+				StringExpandPlaceholders(gStringVar4, gText_CongratsPlotMonEvolved);
+				BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
+				PlayBGM(MUS_EVOLVED);
+				gTasks[taskId].tState++;
+				SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
+				CalculateMonStats(mon);
+				EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
+				IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+			}
+			else
+			{
+				StringExpandPlaceholders(gStringVar4, gText_CongratsPkmnEvolved);
+				BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
+				PlayBGM(MUS_EVOLVED);
+				gTasks[taskId].tState++;
+				SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
+				CalculateMonStats(mon);
+				EvolutionRenameMon(mon, gTasks[taskId].tPreEvoSpecies, gTasks[taskId].tPostEvoSpecies);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_SEEN);
+				GetSetPokedexFlag(SpeciesToNationalPokedexNum(gTasks[taskId].tPostEvoSpecies), FLAG_SET_CAUGHT);
+				IncrementGameStat(GAME_STAT_EVOLVED_POKEMON);
+			}
         }
         break;
     case EVOSTATE_TRY_LEARN_MOVE:

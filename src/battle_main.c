@@ -1571,6 +1571,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 personalityValue += nameHash << 8;
                 fixedIV = partyData[i].iv * MAX_PER_STAT_IVS / 255;
                 CreateMon(&party[i], partyData[i].species, partyData[i].lvl, fixedIV, TRUE, personalityValue, OT_ID_RANDOM_NO_SHINY, 0);
+                SetMonData(&party[i], MON_DATA_POKEBALL, &partyData[i].pokeball);
                 break;
             }
             case F_TRAINER_PARTY_CUSTOM_MOVESET:

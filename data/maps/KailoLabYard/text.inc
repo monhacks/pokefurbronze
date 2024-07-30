@@ -207,4 +207,5 @@ KailoLabYard_Text_YoriVill::
         .string "What's that blue POKéMON?\p"
         .string "...\p"
         .string "...yeah...\n"
-        .string "I don't know either...$"
+        .string "I don't know either...\l"
+        .string "Did you saw its ears...?$"
