@@ -1,4 +1,4 @@
-# Pokémon MindPink and MindPink
+# Pokémon MindPink and IceTurquoise
 
 [![Build Status][travis-badge]][travis]
 
