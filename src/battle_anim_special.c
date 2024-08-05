@@ -232,7 +232,7 @@ static const TaskFunc sBallParticleAnimationFuncs[] =
     [BALL_TIMER]   = TimerBallOpenParticleAnimation,
     [BALL_LUXURY]  = GreatBallOpenParticleAnimation,
     [BALL_PREMIER] = PremierBallOpenParticleAnimation,
-    [BALL_SHADOW]  = TimerBallOpenParticleAnimation,
+    [BALL_SHADOW]  = PokeBallOpenParticleAnimation,
 };
 
 static const struct SpriteTemplate sBallParticlesSpriteTemplates[] =
@@ -370,7 +370,7 @@ static const u16 sBallOpenFadeColors[] =
     [BALL_TIMER]   = RGB(29, 30, 30),
     [BALL_LUXURY]  = RGB(31, 17, 10),
     [BALL_PREMIER] = RGB(31, 9, 10),
-    [BALL_SHADOW]   = RGB(29, 30, 30),
+    [BALL_SHADOW]   = RGB(15, 15, 15),
 
     // Unused
     RGB_BLACK,
