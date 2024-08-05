@@ -346,8 +346,8 @@ static const struct SpriteTemplate sBallParticlesSpriteTemplates[] =
         .callback = SpriteCallbackDummy,
     },
     [BALL_SHADOW] = {
-        .tileTag = TAG_PARTICLES_POKEBALL,
-        .paletteTag = TAG_PARTICLES_POKEBALL,
+        .tileTag = TAG_PARTICLES_SHADOWBALL,
+        .paletteTag = TAG_PARTICLES_SHADOWBALL,
         .oam = &gOamData_AffineOff_ObjNormal_8x8,
         .anims = sAnims_BallParticles,
         .images = NULL,
